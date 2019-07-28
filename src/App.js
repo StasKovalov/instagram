@@ -8,6 +8,8 @@ function App() {
   return (
     <div className="App">
       <Title>Awesome title</Title>
+      <Title>Awesome title</Title>
+      <Title>Awesome title</Title>
     </div>
   );
 }
