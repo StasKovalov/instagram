@@ -1,0 +1,21 @@
+.homepage {
+
+  .inner {
+     
+    .main-content {
+      display: flex;
+      height: 100vh;
+
+       .images, .login-section {
+        flex-basis: 50%;
+      }
+
+      .images {
+        background: url('./assets/iphone-img.png') no-repeat;
+        background-position: center center;
+      }
+    }
+
+  }
+
+}
