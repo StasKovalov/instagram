@@ -10,7 +10,7 @@ const Footer = props => {
             <div className = 'info-block'>
                 {infoNames.map(name => <Info>{name}</Info>)}
             </div>
-            <span>© 2019 INSTAGRAM</span>
+            <span className = 'inst'>© 2019 INSTAGRAM</span>
         </div>
     )
 }

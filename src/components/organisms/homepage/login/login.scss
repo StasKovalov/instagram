@@ -1,6 +1,47 @@
 .login-section {
-    .instagram-logo {
-    height: auto;
-    width: 175px;
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  width: 100%;
+    
+    .login-top {
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+        border: 1px solid #e6e6e6;
+  border-radius: 1px;
+      width: 100%;
+      margin: 0 0 10px;
+      padding: 10px 0;
+      background: #fff;
+
+        .instagram-logo {
+          height: auto;
+          width: 175px;
+          margin-top: 24px;
+          margin-bottom: 24px;
     }
+
+    .or {
+     display: flex;
+     max-width: 265px;
+     width: 100%;
+     color: #999;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 20px;
+     .hr {
+        width: 40%;
+        background: #efefef;
+        height: 1px;
+     }
+    }
+
+    .forgot_password {
+        margin-top: 20px;
+        font-size: 14px;
+        cursor: pointer;
+        color: #003569;
+    }
+}
 }

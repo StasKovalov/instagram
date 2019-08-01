@@ -1,13 +1,22 @@
 .homepage {
+   background: #fafafa;
+   max-width: 1350px;
   .inner {
-    width: 70%; 
+    padding-top: 37px;
+    width: 80%; 
     margin: 0 auto;    
     .main-content {
       display: flex;
       height: 100vh;
+      justify-content: center;
+      align-items: center;
 
        .iphone-img, .login-section {
         flex-basis: 50%;
+      }
+
+      .iphone-img{
+        text-align: right;
       }
     }
 

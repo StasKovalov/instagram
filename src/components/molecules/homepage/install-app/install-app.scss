@@ -1,0 +1,17 @@
+.install-app-wrapper {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .install-img {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+
+        img {
+            width: 48%;
+            cursor: pointer;
+        }
+    }
+}

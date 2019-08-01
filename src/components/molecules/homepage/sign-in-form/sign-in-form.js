@@ -12,7 +12,7 @@ const SignForm = props => {
             <div className='login-input'>
                 <Input placeholder='Пароль' />
             </div>
-            <button className = 'sign-in'>Войти</button>
+            <button className = 'sign-in__button'>Войти</button>
         </form>
     )
 }
