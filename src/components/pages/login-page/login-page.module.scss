@@ -1,0 +1,27 @@
+
+.loginPage {
+   background: #fafafa;
+   max-width: 1350px;
+   display: flex;
+   padding: 0 20px;
+   flex-direction: column;
+   align-items: center;
+  .inner {
+    .mainContent {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width:850px) {
+        .iphoneImg {
+          display: none;
+        }
+      }
+
+       @media (min-width: 851px) {
+           padding-bottom: 40px;
+        }
+    }
+    }
+  }

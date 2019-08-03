@@ -1,20 +1,20 @@
 import React from 'react';
-import './sign-in-form.scss';
+import style from './form.module.scss';
 
 import Input from '../../../atoms/input';
 
-const SignForm = props => {
+const Form = props => {
     return (
-        <form className='login-form'>
-            <div className='login-input'>
+        <form className={style.loginForm}>
+            <div className={style.loginInput}>
                 <Input placeholder='Номер телефона, имя пользователя или эл. адрес' />
             </div>
-            <div className='login-input'>
+            <div className={style.loginInput}>
                 <Input placeholder='Пароль' />
             </div>
-            <button className = 'sign-in__button'>Войти</button>
+            <button className={style.signInButton}>Войти</button>
         </form>
     )
 }
 
-export default SignForm;
+export default Form;

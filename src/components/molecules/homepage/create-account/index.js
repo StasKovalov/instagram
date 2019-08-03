@@ -1,3 +1,1 @@
-import CreateAccount from './create-account';
-
-export default CreateAccount;
+export { default } from './create-account';

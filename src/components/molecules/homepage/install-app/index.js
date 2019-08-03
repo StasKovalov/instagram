@@ -1,3 +1,1 @@
-import InstallApp from './install-app';
-
-export default InstallApp;
+export { default } from './install-app';

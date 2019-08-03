@@ -1,29 +1,29 @@
 import React from 'react';
-import './login.scss';
+import style from './login.module.scss';
 
 import Instagram from '../../../../assets/instagram.png';
-import SignForm from '../../../molecules/homepage/sign-in-form';
+import Form from '../../../molecules/homepage/form';
 import CreateAccount from '../../../molecules/homepage/create-account';
 import InstallApp from '../../../molecules/homepage/install-app';
+import Line from '../../../atoms/line';
 
 const Login = props => {
   return (
-    <div className='login-section'>
-      <div className='login-top'>
-        <img className='instagram-logo' src={Instagram} />
-        <SignForm />
-        <div className='or'>
-          <div className='hr'></div>
+    <div className={style.loginSection}>
+      <div className={style.loginTop}>
+        <img className={style.instagramInscr} src={Instagram} />
+        <Form />
+        <div className={style.or}>
+          <Line />
           ИЛИ
-            <div className='hr'></div>
+          <Line />
         </div>
-        <span className='forgot_password'>Забыли пароль?</span>
+        <span className={style.forgotPassword}>Забыли пароль?</span>
       </div>
       <CreateAccount />
       <InstallApp />
     </div>
   )
 }
-
 
 export default Login;

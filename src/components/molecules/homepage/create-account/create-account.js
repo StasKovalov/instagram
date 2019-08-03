@@ -1,9 +1,9 @@
 import React from 'react';
-import './create-account.scss';
+import style from './create-account.module.scss';
 
-const CreateAccount = props => {
+const CreateAccount = () => {
     return (
-        <div className = 'create-account'>
+        <div className = {style.createAccount}>
             <span>У вас еще нет аккаунта?</span>
             <a>Зарегистрироваться</a>
         </div>

@@ -1,16 +1,17 @@
 import React from 'react';
-import './footer.scss';
+import style from './footer.module.scss';
 
-import Info from '../../../atoms/info/info';
+import Text from '../../../atoms/text';
+
+const LINKS = ['О НАС', 'ПОДДЕРЖКА', 'ПРЕССА', 'API', 'ВАКАНСИИ', 'КОНФИДЕНЦИАЛЬНОСТЬ', 'УСЛОВИЯ', 'ДИРЕКТОРИЯ', 'ПРОФИЛИ', 'ХЭШТЕГИ', 'ЯЗЫК'];
 
 const Footer = props => {
-    const infoNames = ['О НАС', 'ПОДДЕРЖКА', 'ПРЕССА', 'API', 'ВАКАНСИИ', 'КОНФИДЕНЦИАЛЬНОСТЬ', 'УСЛОВИЯ', 'ДИРЕКТОРИЯ', 'ПРОФИЛИ', 'ХЭШТЕГИ', 'ЯЗЫК'];
     return (
-        <div className = 'footer'>
-            <div className = 'info-block'>
-                {infoNames.map(name => <Info>{name}</Info>)}
+        <div className={style.footer}>
+            <div className={style.infoBlock}>
+                {LINKS.map(name => <Text key = {name}>{name}</Text>)}
             </div>
-            <span className = 'inst'>© 2019 INSTAGRAM</span>
+            <span className = {style.inst}>© 2019 INSTAGRAM</span>
         </div>
     )
 }

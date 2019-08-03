@@ -1,13 +1,15 @@
-.install-app-wrapper {
-    margin-top: 15px;
+.installAppWrapper {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    .install-img {
+    .installImg {
         display: flex;
         justify-content: space-between;
-        margin-top: 15px;
+        margin-top: 20px;
 
         img {
             width: 48%;

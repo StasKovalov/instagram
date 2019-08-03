@@ -1,21 +1,22 @@
-.login-section {
+.loginSection {
   display: flex;
   flex-direction: column;
   max-width: 350px;
+  flex-shrink: 0;
   width: 100%;
     
-    .login-top {
+    .loginTop {
       display: flex;
       flex-direction: column;
       align-items:center;
-        border: 1px solid #e6e6e6;
-  border-radius: 1px;
+      border: 1px solid #e6e6e6;
+      border-radius: 1px;
       width: 100%;
       margin: 0 0 10px;
       padding: 10px 0;
       background: #fff;
 
-        .instagram-logo {
+       .instagramInscr {
           height: auto;
           width: 175px;
           margin-top: 24px;
@@ -23,6 +24,9 @@
     }
 
     .or {
+       font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
      display: flex;
      max-width: 265px;
      width: 100%;
@@ -30,16 +34,13 @@
      justify-content: space-between;
      align-items: center;
      margin-top: 20px;
-     .hr {
-        width: 40%;
-        background: #efefef;
-        height: 1px;
-     }
     }
 
-    .forgot_password {
+    .forgotPassword {
+        font-family: 'Montserrat', sans-serif;
         margin-top: 20px;
-        font-size: 14px;
+        font-weight: 500;
+        font-size: 11px;
         cursor: pointer;
         color: #003569;
     }
