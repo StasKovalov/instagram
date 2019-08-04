@@ -9,9 +9,9 @@ import { DiAptana } from "react-icons/di";
 const AccountSettings = () => {
     return (
         <div className = {style.settings}>
-            <Text>username</Text>
-            <Button>Редактировать профиль</Button>
-            <Icon><DiAptana/></Icon>
+            <Text userName>username</Text>
+            <Button editProfile>Редактировать профиль</Button>
+            <Icon><DiAptana size='2em'/></Icon>
         </div>
     )
 }

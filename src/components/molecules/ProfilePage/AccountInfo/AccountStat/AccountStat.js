@@ -7,16 +7,16 @@ const AccountStat = ({ pub, followers, subs }) => {
     return (
         <div className={style.statisticsWrap}>
             <div className={style.publications}>
-                <Text>5</Text>
-                <Text>публикаций</Text>
+                <Text infoAccount bold>5</Text>
+                <Text infoAccount>публикаций</Text>
             </div>
             <div className={style.followers}>
-                <Text>222</Text>
-                <Text>подписчиков</Text>
+                <Text infoAccount bold>1000</Text>
+                <Text infoAccount>подписчиков</Text>
             </div>
             <div className={style.subs}>
-                <Text>1000</Text>
-                <Text>подписок</Text>
+                <Text infoAccount>подписки:</Text>
+                <Text infoAccount bold>1</Text>
             </div>
         </div>
     )

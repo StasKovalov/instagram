@@ -6,8 +6,8 @@ import Text from '../../../../atoms/Text';
 const AccountAbout = props => {
     return (
         <div className = {style.accountAbout}>
-            <Text>realName</Text>
-            <Text>about me</Text>
+            <Text realName bold>realName</Text>
+            <Text aboutAccount>about me</Text>
         </div>
     )
 }

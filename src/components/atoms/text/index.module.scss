@@ -1,3 +1,7 @@
+.text {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .links {
     color: #003569;
     font-size: 11px;
@@ -9,3 +13,27 @@
     }
 }
 
+.userName {
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.infoAccount {
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.realName {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.aboutAccount {
+      font-size: 15px;
+}
+
+.bold {
+    color: #262626;
+    font-weight: 600;
+}

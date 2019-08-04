@@ -1,0 +1,14 @@
+.accountInfo {
+    display: flex;
+
+    .avatarWrap {
+        margin-right: 70px;
+    }
+
+    .info {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+}

@@ -10,8 +10,8 @@ const InstallApp = props => {
         <div className={style.installAppWrapper}>
             <span>Установите приложение</span>
             <div className={style.installImg}>
-                <img src={INST_IOS}/>
-                <img src={INST_ANDR} />
+                <img alt='ios-download' src={INST_IOS}/>
+                <img alt='andr-download' src={INST_ANDR}/>
             </div>
         </div>
     )
