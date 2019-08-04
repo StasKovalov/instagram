@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './line.module.scss';
+import style from './index.module.scss';
 
 const classNames = require('classnames');
 
