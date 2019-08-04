@@ -1,10 +1,10 @@
 import React from 'react';
 import style from './login.module.scss';
 
-import Form from '../../../molecules/homepage/form';
+import Form from '../../../molecules/login-page/login/form';
 import InstagramImg from '../../../atoms/instagram-img';
-import CreateAccount from '../../../molecules/homepage/create-account';
-import InstallApp from '../../../molecules/homepage/install-app';
+import CreateAccount from '../../../molecules/login-page/login/create-account';
+import InstallApp from '../../../molecules/login-page/login/install-app';
 import Line from '../../../atoms/line';
 
 const Login = props => {
@@ -14,9 +14,9 @@ const Login = props => {
          <InstagramImg loginPage/>
         <Form />
         <div className={style.or}>
-          <Line />
+          <Line horizontal loginPage/>
           ИЛИ
-          <Line />
+          <Line horizontal loginPage/>
         </div>
         <span className={style.forgotPassword}>Забыли пароль?</span>
       </div>

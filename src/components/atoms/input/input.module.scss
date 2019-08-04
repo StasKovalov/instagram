@@ -1,0 +1,19 @@
+.input {
+    width: 100%;
+    border: none;
+}
+
+.searchInput {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        background: #fafafa;
+        width: 199px;
+        border: 1px solid #dbdbdb;
+        border-radius: 4px;
+        height: 22px;
+        padding-left: 20px;
+        &::placeholder {
+            color: #999;
+            text-align: center;
+        }
+}

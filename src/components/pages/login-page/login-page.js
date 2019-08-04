@@ -1,8 +1,8 @@
 import React from 'react';
 import style from './login-page.module.scss';
 
-import Login from '../../organisms/homepage/login';
-import Footer from '../../organisms/homepage/footer';
+import Login from '../../organisms/login-page/login';
+import Footer from '../../organisms/login-page/footer';
 import IphonePic from '../../../assets/iphone-img.png'
 
 

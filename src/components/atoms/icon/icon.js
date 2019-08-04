@@ -1,10 +1,10 @@
 import React from 'react';
-import style from 'icon.module.scss';
+import style from './icon.module.scss';
 
-const Icon = ({childrern}) => {
+const Icon = ({children}) => {
     return (
     <div className={style.icon}>
-        {childrern}
+        {children}
     </div>
     )
 }

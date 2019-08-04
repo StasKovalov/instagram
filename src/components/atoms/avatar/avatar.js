@@ -1,9 +1,15 @@
 import React from 'react';
 import style from './avatar.module.scss';
 
-const Avatar = props => {
+const classNames = require('classnames');
+
+const Avatar = ({profilePage, mainPage}) => {
+    let avatarStyle = classNames({
+        [style.profile]: profilePage,
+        [style.main]: mainPage,
+    })
     return (
-        < div className = { style.avatarWrap } >
+        < div className={avatarStyle} >
             <img className={style.avatarImg} />
         </div >
     )

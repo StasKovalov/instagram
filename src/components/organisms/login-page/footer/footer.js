@@ -9,7 +9,7 @@ const Footer = props => {
     return (
         <div className={style.footer}>
             <div className={style.infoBlock}>
-                {LINKS.map(name => <Text key = {name}>{name}</Text>)}
+                {LINKS.map(name => <Text links key = {name}>{name}</Text>)}
             </div>
             <span className = {style.inst}>© 2019 INSTAGRAM</span>
         </div>

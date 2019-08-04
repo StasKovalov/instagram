@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './form.module.scss';
 
-import Input from '../../../atoms/input';
+import Input from '../../../../atoms/input';
 
 const Form = props => {
     return (
