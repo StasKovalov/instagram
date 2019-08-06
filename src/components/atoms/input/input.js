@@ -1,6 +1,6 @@
-import React from 'react';
-import './input.scss';
+import React from "react";
+import "./input.scss";
 
-const Input = props => <input {...props} />
+const Input = props => <input {...props} />;
 
 export default Input;
