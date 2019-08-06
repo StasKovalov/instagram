@@ -1,34 +1,19 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
 
-.loginPage {
-   background: #fafafa;
-   max-width: 1350px;
-   display: flex;
-   padding: 0 20px;
-   flex-direction: column;
-  
-           
- @media (min-width: 450px) {
-       align-items: center;
+.image { 
+  width: 500px;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 992px) {
+  .image { 
+    display: none;
   }
-  .inner {
-    .mainContent {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      @media (max-width:850px) {
-        .iphoneImg {
-          display: none;
-        }
-      }
-
-       @media (min-width: 851px) {
-           padding-bottom: 40px;
-        }
-
-        @media (min-width: 450px) {
-            height: 100vh;
-  }
-    }
-    }
-  }
+}
