@@ -1,0 +1,37 @@
+.accountPublication {
+    display: flex;
+    justify-content: center;
+    .liContainer {
+        padding: 20px;
+        margin-right: 40px;
+        font-family: 'Montserrat', sans-serif;
+        color: #999;
+        font-weight: 600;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        &:last-child {
+            margin-right: 0;
+        }
+        .sectionName {
+            margin-left: 10px;
+        }
+    }
+    .myPhotos,
+    .igtv,
+    .savedPublications,
+    .marks {
+        display: block;
+        background-repeat: no-repeat;
+        background: url('../../../../../assets/icons-image-size-s.png');
+        height: 12px;
+        width: 12px;
+    }
+    
+     .myPhotos {background-position: -274px -337px;}
+     .igtv {background-position: -330px -337px;}
+     .savedPublications {background-position: -42px -361px;}
+     .marks {background-position: -246px -337px;}
+}
+
+

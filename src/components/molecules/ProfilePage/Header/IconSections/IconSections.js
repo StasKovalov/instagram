@@ -3,15 +3,12 @@ import style from './index.module.scss';
 
 import Icon from '../../../../atoms/Icon';
 
-import { IoIosHeartEmpty } from "react-icons/io";
-import { MdPersonOutline, MdNotificationsNone } from "react-icons/md";
-
 const IconSections = () => {
     return (
         <div className={style.iconSections}>
-            <Icon><MdNotificationsNone size = '2em'/></Icon>
-            <Icon><IoIosHeartEmpty size='2em'/></Icon>
-            <Icon><MdPersonOutline size='2em' /></Icon>
+            <Icon sizeM><span className = {style.searchPeople}/></Icon>
+            <Icon sizeM><span className = {style.likesPublications}/></Icon>
+            <Icon sizeM><span className = {style.myProfile}/></Icon>
         </div>
     )
 }

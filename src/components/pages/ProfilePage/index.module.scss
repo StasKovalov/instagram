@@ -1,16 +1,19 @@
 .profilePage {
-    max-width: 1350px;
-    display: flex;
-    flex-direction: column;
+    background:hsl(0, 0%, 98%);
+    .inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 1350px;
+    
     .main {
-        background:#fafafa;
-        width: 100%;
+        max-width: 935px;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        .inner {
-            width: 68%;
-            padding-top: 50px;
-        }
+        padding: 60px 20px 0;
+        width: calc(100% - 40px);
     }
+        }
 }

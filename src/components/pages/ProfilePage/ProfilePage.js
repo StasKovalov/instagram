@@ -3,17 +3,21 @@ import style from './index.module.scss';
 
 import Header from '../../organisms/ProfilePage/Header';
 import AccountInfo from '../../organisms/ProfilePage/AccountInfo';
+import AccountPublication from '../../organisms/ProfilePage/AccountPublication';
+import Footer from '../../organisms/LoginPage/Footer';
 
 const ProfilePage = props => {
     return (
-        <div className = {style.profilePage}>
+        <section className = {style.profilePage}>
+            <div className={style.inner}>
             <Header />
             <main className = {style.main}>
-                <div className = {style.inner}>
                     <AccountInfo />
-                </div>
+                    <AccountPublication/>
             </main>
-        </div>
+                <Footer />
+            </div>
+        </section>
     )
 }
 
