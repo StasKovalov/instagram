@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.scss';
 
-import LoginPage from './components/pages/LoginPage';
-import ProfilePage from './components/pages/ProfilePage';
+import LoginPage from "@pages/LoginPage";
+import ProfilePage from "@pages/ProfilePage";
 
 function App() {
   return (

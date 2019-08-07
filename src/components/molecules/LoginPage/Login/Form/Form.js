@@ -1,14 +1,7 @@
-<<<<<<< HEAD:src/components/molecules/LoginPage/Login/Form/Form.js
-import React from 'react';
-import style from './index.module.scss';
-
-import Input from '../../../../atoms/Input';
-=======
 import React from "react";
-import style from "./form.module.scss";
+import style from "./index.module.scss";
 
-import Input from "@atoms/input";
->>>>>>> master:src/components/molecules/homepage/form/form.js
+import Input from "@atoms/Input";
 
 const Form = props => {
   return (

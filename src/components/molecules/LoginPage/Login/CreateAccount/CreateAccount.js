@@ -1,10 +1,5 @@
-<<<<<<< HEAD:src/components/molecules/LoginPage/Login/CreateAccount/CreateAccount.js
-import React from 'react';
-import style from './index.module.scss';
-=======
 import React from "react";
-import style from "./create-account.module.scss";
->>>>>>> master:src/components/molecules/homepage/create-account/create-account.js
+import style from "./index.module.scss";
 
 const CreateAccount = () => {
   return (

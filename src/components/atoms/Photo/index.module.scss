@@ -1,3 +1,11 @@
 .photo {
-    width: 32%;
+    max-width: 270px;
+    margin-right: 28px;
+    margin-top: 28px;
+    &:nth-child(3n+3) {
+        margin-right: 0px;
+    }
+     &:nth-child(-n+3) {
+        margin-top: 0px;
+    }
 }

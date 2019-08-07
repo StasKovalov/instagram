@@ -1,7 +1,7 @@
 import React from "react";
-import style from "./footer.module.scss";
+import style from "./index.module.scss";
 
-import Text from "@atoms/text";
+import Text from "@atoms/Text";
 
 const LINKS = [
   "О НАС",
@@ -21,7 +21,7 @@ const Footer = () => (
   <div className={style.footer}>
     <div className={style.infoBlock}>
       {LINKS.map(link => (
-        <Text key={link}>{link}</Text>
+        <Text links key={link}>{link}</Text>
       ))}
     </div>
     <span className={style.inst}>© 2019 INSTAGRAM</span>

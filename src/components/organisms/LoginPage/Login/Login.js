@@ -1,11 +1,11 @@
-import React from 'react';
-import style from './index.module.scss';
+import React from "react";
+import style from "./index.module.scss";
 
-import Form from '../../../molecules/LoginPage/Login/Form';
-import InstagramImg from '../../../atoms/InstagramImg';
-import CreateAccount from '../../../molecules/LoginPage/Login/CreateAccount';
-import InstallApp from '../../../molecules/LoginPage/Login/InstallApp';
-import Line from '../../../atoms/Line';
+import Form from "@molecules/LoginPage/Login/Form";
+import InstagramImg from "@atoms/InstagramImg";
+import CreateAccount from "@molecules/LoginPage/Login/CreateAccount";
+import InstallApp from "@molecules/LoginPage/Login/InstallApp";
+import Line from "@atoms/Line";
 
 const Login = props => {
   return (

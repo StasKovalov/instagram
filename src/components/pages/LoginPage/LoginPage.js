@@ -1,15 +1,18 @@
 import React from "react";
-import style from "./login-page.module.scss";
+import style from "./index.module.scss";
 
-import Login from "@organisms/homepage/login";
-// import Footer from "../../organisms/homepage/footer";
+import Login from "@organisms/LoginPage/Login";
+import Footer from "@organisms/LoginPage/Footer";
 import loginPhoneImage from "@assets/iphone-img.png";
 
 const LoginPage = props => {
   return (
     <section className={style.container}>
-      <img className={style.image} alt="iphone-img" src={loginPhoneImage} />
-      <Login />
+      <main className={style.main}>
+        <img className={style.image} alt="iphone-img" src={loginPhoneImage} />
+        <Login />
+      </main>
+      <Footer/>
     </section>
   );
 };
