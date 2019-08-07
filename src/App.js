@@ -1,12 +1,13 @@
-import React from 'react';
-import './App.scss';
+import React from "react";
+import "./App.scss";
+import Layout from "@pages/Layout";
+import Main from "@pages/Main";
 
-import Main from "@pages/Main"
+const App = () => (
+  <Layout>
+    <Main />
+  </Layout>
+);
 
-function App() {
-  return (
-      <Main/>
-  );
-}
 
 export default App;

@@ -51,7 +51,6 @@ class List extends Component {
                 </div>
               ));
             case isError:
-              console.log('error')
               return <div>isError</div>;
             default:
               return (
