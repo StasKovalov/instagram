@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.cardWrapper {
+  flex-basis: 33.33%;
+  padding: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .cardWrapper {
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardWrapper {
+    flex-basis: 100%;
+  }
+}

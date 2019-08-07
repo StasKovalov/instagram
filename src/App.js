@@ -1,11 +1,13 @@
-import React from 'react';
-import './App.scss';
-import LoginPage from './components/pages/login-page';
+import React from "react";
+import "./App.scss";
+import LoginPage from "./components/pages/login-page";
+import Layout from "@pages/Layout";
+import Main from "@pages/Main";
 
-function App() {
-  return (
-      <LoginPage/>
-  );
-}
+const App = () => (
+  <Layout>
+    <Main />
+  </Layout>
+);
 
 export default App;
