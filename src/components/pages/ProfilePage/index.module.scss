@@ -1,3 +1,5 @@
+@import '../../../scss/variables.scss';
+
 .profilePage {
     background:hsl(0, 0%, 98%);
     display: flex;
@@ -15,8 +17,14 @@
         max-width: 935px;
         display: flex;
         flex-direction: column;
-        padding: 60px 20px 0;
         width: calc(100% - 40px);
+          @media screen and (min-width:$screen-sm) {
+                padding: 60px 20px 0;
+          }  
+
+           @media screen and (max-width:$screen-xs-max) {
+                padding: 20px;
+          }  
     }
-        }
+}
 }
