@@ -1,6 +1,6 @@
+@import '../../../../../scss/variables.scss';
 .settings {
-    display: flex;
-    align-items: center;
+          display: flex;
     .settingsIcon {
         display: block;
         background: url('../../../../../assets/icons-image-size-m.png');
@@ -8,5 +8,19 @@
         background-position: -234px -326px;
         height: 24px;
         width: 24px;
+    }
+        .editItems {
+        display: flex;
+    }
+
+     @media screen and (min-width:$screen-md) {
+        align-items: center;
+    }
+
+    @media screen and (max-width:$screen-sm-max) {
+        flex-direction: column;
+        .editItems {
+            margin: 20px 0px;
+        }
     }
 }

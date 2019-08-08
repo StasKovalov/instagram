@@ -1,11 +1,20 @@
+@import '../../../scss/variables.scss';
 .avatarImg {
     width: 100%;
 }
 
 .profile {
     border: 1px solid rgba(0,0,0,.0975);
-    width: 150px;
-    height: 150px;
     overflow: hidden;
     border-radius: 50%;
+
+    @media screen and (max-width:$screen-xs-max) {
+         width: 77px;
+         height: 77px;
+    }
+
+      @media screen and (min-width:$screen-sm) {
+         width: 150px;
+         height: 150px;
+    }
 }

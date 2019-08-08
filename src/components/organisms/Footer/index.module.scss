@@ -1,4 +1,4 @@
-@import '../../../../scss/variables.scss';
+@import '../../../scss/variables.scss';
 .footer {
     font-family: 'Montserrat', sans-serif;
     display: flex;
@@ -18,7 +18,6 @@
          .footer {
             justify-content: center;
             align-items: center;
-            margin: 40px auto;
             max-width: 360px;
             padding-bottom: 10px;
          .infoBlock {

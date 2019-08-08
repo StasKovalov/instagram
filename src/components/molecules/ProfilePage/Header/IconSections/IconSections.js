@@ -6,9 +6,9 @@ import Icon from '../../../../atoms/Icon';
 const IconSections = () => {
     return (
         <div className={style.iconSections}>
-            <Icon sizeM><span className = {style.searchPeople}/></Icon>
-            <Icon sizeM><span className = {style.likesPublications}/></Icon>
-            <Icon sizeM><span className = {style.myProfile}/></Icon>
+            <Icon ><span className = {style.searchPeople}/></Icon>
+            <Icon ><span className = {style.likesPublications}/></Icon>
+            <Icon ><span className = {style.myProfile}/></Icon>
         </div>
     )
 }

@@ -1,37 +1,69 @@
+@import '../../../../../scss/variables.scss';
+
 .accountPublication {
+    border-top: 1px solid #efefef;
     display: flex;
+    width: 100%;
     justify-content: center;
     .liContainer {
-        padding: 20px;
-        margin-right: 40px;
-        font-family: 'Montserrat', sans-serif;
         color: #999;
-        font-weight: 600;
-        font-size: 13px;
         display: flex;
         align-items: center;
-        &:last-child {
+
+        .myPhotos,
+        .igtv,
+        .savedPublications,
+        .marks {
+            display: block;
+            background-repeat: no-repeat;
+        }
+
+      @media screen and (min-width:$screen-md) {
+            padding: 20px;
+            margin-right: 40px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+           font-size: 13px;
+            &:last-child {
             margin-right: 0;
         }
         .sectionName {
             margin-left: 10px;
         }
-    }
-    .myPhotos,
-    .igtv,
-    .savedPublications,
-    .marks {
-        display: block;
-        background-repeat: no-repeat;
-        background: url('../../../../../assets/icons-image-size-s.png');
-        height: 12px;
-        width: 12px;
+        .myPhotos,
+        .igtv,
+        .savedPublications,
+        .marks {
+            background: url('../../../../../assets/icons-image-size-s.png');
+            height: 12px;
+            width: 12px;
+        }
+            .myPhotos {background-position: -274px -337px;}
+            .igtv {background-position: -330px -337px;}
+            .savedPublications {background-position: -42px -361px;}
+            .marks {background-position: -246px -337px;}
     }
     
-     .myPhotos {background-position: -274px -337px;}
-     .igtv {background-position: -330px -337px;}
-     .savedPublications {background-position: -42px -361px;}
-     .marks {background-position: -246px -337px;}
+    @media screen and (max-width:$screen-sm-max) {
+        width: 25%;
+        justify-content: center;
+        padding: 14px;
+        .myPhotos,
+        .igtv,
+        .savedPublications,
+        .marks {
+            background: url('../../../../../assets/icons-image-size-m.png');
+            height: 24px;
+            width: 24px;
+        }
+           .myPhotos {background-position: -340px -286px;}
+            .igtv {background-position: -156px -300px;}
+            .savedPublications {background-position: -104px -326px;}
+            .marks {background-position: -208px -326px;}
+
+            .sectionName {display: none;}
+    }
+    }
 }
 
 

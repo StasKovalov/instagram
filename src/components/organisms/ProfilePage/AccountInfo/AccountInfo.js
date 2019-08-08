@@ -17,7 +17,7 @@ const AccountInfo = props => {
 
             <div className={style.info}>
                 <AccountSettings />
-                <AccountStat />
+                <AccountStat desktop/>
                 <AccountAbout />
             </div>
         </div>

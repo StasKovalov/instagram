@@ -2,7 +2,7 @@ import React from "react";
 import style from "./index.module.scss";
 
 import Login from "@organisms/LoginPage/Login";
-import Footer from "@organisms/LoginPage/Footer";
+import Footer from "@organisms/Footer";
 import loginPhoneImage from "@assets/iphone-img.png";
 
 const LoginPage = props => {

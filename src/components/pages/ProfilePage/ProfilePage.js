@@ -4,7 +4,7 @@ import style from './index.module.scss';
 import Header from '../../organisms/ProfilePage/Header';
 import AccountInfo from '../../organisms/ProfilePage/AccountInfo';
 import AccountPublication from '../../organisms/ProfilePage/AccountPublication';
-import Footer from '../../organisms/LoginPage/Footer';
+import Footer from '../../organisms/Footer';
 
 const ProfilePage = props => {
     return (

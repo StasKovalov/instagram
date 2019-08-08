@@ -1,5 +1,8 @@
+@import '../../../scss/variables.scss';
+
 .text {
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 
 .links {
@@ -15,15 +18,27 @@
     font-weight: 300;
     font-size: 28px;
     line-height: 32px;
+    @media screen and (max-width: 420px) {
+           text-align: center;
+    }
 }
 
 .infoAccount {
     font-size: 15px;
     margin-right: 5px;
+
+      @media screen and (max-width:$screen-sm-max) {
+        margin-right: 0px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #999;
+        margin-top: 5px;
+    }
 }
 
+
 .realName {
-  font-size: 16px;
+  font-size: 15px;
   margin-bottom: 5px;
 }
 
@@ -34,4 +49,5 @@
 .bold {
     color: #262626;
     font-weight: 600;
+    font-size: 15px;
 }

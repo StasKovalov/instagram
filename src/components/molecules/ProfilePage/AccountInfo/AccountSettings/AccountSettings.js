@@ -10,8 +10,10 @@ const AccountSettings = () => {
     return (
         <div className = {style.settings}>
             <Text userName>username</Text>
-            <Button editProfile>Редактировать профиль</Button>
-            <Icon sizeM><span className={style.settingsIcon}/></Icon>
+            <div className={style.editItems}> 
+                <Button editProfile>Редактировать профиль</Button>
+                <Icon><span className={style.settingsIcon} /></Icon>
+            </div>
         </div>
     )
 }
