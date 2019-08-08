@@ -1,6 +1,6 @@
 import React from "react";
 import Skeleton from "react-loading-skeleton";
-import style from "./index.module.css";
+import style from "./index.module.scss";
 
 export const CardSkeleton = () => (
   <div className={style.card}>

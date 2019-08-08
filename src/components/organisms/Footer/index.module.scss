@@ -1,0 +1,46 @@
+@import '../../../scss/variables.scss';
+.footer {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    .infoBlock {
+     display: flex;
+     flex-wrap: wrap;
+    }
+    .inst {
+        font-size: 11px;
+        color: #999;
+        margin-top: 15px;
+        font-weight: 600;
+    }
+}
+
+
+     @media (min-width: 851px) {
+        .footer {
+            width: calc(100% - 40px); 
+            padding: 30px 30px;
+            max-width: 935px;
+        }
+    }
+
+     @media (max-width: 850px) {
+         .footer {
+            justify-content: center;
+            align-items: center;
+            max-width: 360px;
+            padding-bottom: 10px;
+         .infoBlock {
+            justify-content: center;
+            text-align: center;
+         }
+    }
+    }
+
+           @media (max-width: 450px) {
+            .footer {
+                margin-top: 40px;
+            }
+  }
+
+    

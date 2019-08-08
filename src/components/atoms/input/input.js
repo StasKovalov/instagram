@@ -1,6 +1,13 @@
 import React from "react";
-import "./input.scss";
+import style from "./index.module.scss";
 
-const Input = props => <input {...props} />;
+const classNames = require('classnames');
+
+const Input = ({ profilePage, searchInput, ...props }) => {
+    const styleInput = classNames(style.input,{
+        [style.searchInput]: searchInput
+    });
+    return <input className={styleInput} {...props} />
+}
 
 export default Input;

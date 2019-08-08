@@ -1,0 +1,29 @@
+.iconSections {
+    display: flex;
+    justify-content: space-between;
+    width: 156px;
+
+.searchPeople,
+.likesPublications,
+.myProfile {
+    background: url('../../../../assets/icons-image-size-m.png');
+    background-repeat: no-repeat;
+    display: block;
+    width: 24px;
+    height: 24px;
+} 
+
+.searchPeople {
+ background-position: -257px -200px;
+}
+
+.likesPublications {
+    background-position: -26px -300px;
+}
+
+.myProfile {
+    background-position: -234px -274px;
+}
+
+}
+

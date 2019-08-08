@@ -1,0 +1,14 @@
+.instagramLogo {
+    display: flex;
+    max-width: 370px;
+    align-items: center;
+
+    .instagramIcon {
+        display: block;
+        background: url('../../../../assets/icons-image-size-m.png');
+        background-repeat: no-repeat;
+        background-position: -74px -231px;
+        height: 24px;
+        width: 24px;
+    }
+}

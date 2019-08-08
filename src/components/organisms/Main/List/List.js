@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Card, { CardSkeleton } from "@molecules/Main/Card";
-import style from "./index.module.css";
+import style from "./index.module.scss";
 
 const getFakeArray = (n = 10) => Array(n).fill();
 const DEFAULT_COUNT = 10;
