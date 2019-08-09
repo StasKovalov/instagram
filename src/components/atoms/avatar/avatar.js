@@ -3,7 +3,7 @@ import style from "./index.module.scss";
 
 const classNames = require('classnames');
 
-const Avatar = ({profilePage, mainPage, src}) => {
+const Avatar = ({profilePage, mainPageSidebar, src}) => {
     let avatarStyle = classNames({
         [style.profile]: profilePage,
         [style.main]: mainPage,

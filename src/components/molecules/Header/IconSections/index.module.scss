@@ -1,7 +1,8 @@
 .iconSections {
     display: flex;
     justify-content: space-between;
-    width: 156px;
+    flex-basis: 125px;;
+    flex-shrink: 0;
 
 .searchPeople,
 .likesPublications,

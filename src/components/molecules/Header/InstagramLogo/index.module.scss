@@ -1,8 +1,8 @@
 .instagramLogo {
     display: flex;
-    max-width: 370px;
     align-items: center;
-
+    height: 40px;
+    cursor: pointer;
     .instagramIcon {
         display: block;
         background: url('../../../../assets/icons-image-size-m.png');
@@ -10,5 +10,16 @@
         background-position: -74px -231px;
         height: 24px;
         width: 24px;
+    }
+
+    .elements {
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease-in;
+    }
+
+    .scrolled {
+        opacity: 0;
+        transform: scaleY(0);
     }
 }

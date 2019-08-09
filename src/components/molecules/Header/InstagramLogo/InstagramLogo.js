@@ -5,12 +5,19 @@ import Icon from "@atoms/Icon";
 import Line from "@atoms/Line";
 import InstagramImg from "@atoms/InstagramImg";
 
-const InstagramLogo = () => {
+const classNames = require('classnames');
+
+const InstagramLogo = ({ scrolled }) => {
+    const styleElements = classNames(style.elements, {
+        [style.scrolled]: scrolled
+    })
     return (
-        <div className = {style.instagramLogo}>
-            <Icon><span className = {style.instagramIcon}/></Icon>
-            <Line vertical header/>
-            <InstagramImg profilePage/>
+        <div className={style.instagramLogo}>
+            <Icon><span className={style.instagramIcon} /></Icon>
+            <div className={styleElements}>
+                <Line vertical header />
+                <InstagramImg profilePage />
+            </div>
         </div>
     )
 }

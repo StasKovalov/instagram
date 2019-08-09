@@ -7,7 +7,7 @@ import List from "@organisms/Main/List";
 const Main = props => (
   <Layout>
     <div className={style.container}>
-      <List />
+      
     </div>
   </Layout>
 );

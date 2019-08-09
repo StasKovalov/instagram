@@ -5,7 +5,7 @@
         flex-direction: column;
         width: calc(100% - 40px);
           @media screen and (min-width:$screen-sm) {
-                padding: 60px 20px 0;
+                padding: 40px 20px 0;
           }  
 
            @media screen and (max-width:$screen-xs-max) {
