@@ -1,16 +1,16 @@
 import React from "react";
 import style from "./index.module.scss";
 
-import Recomendation from './Recomendations';
+import Recomendation from "./Recomendation";
 
 const Recomendations = props => {
     return (
         <div className={style.recomendations}>
-            <div className={style.title}>
-                <span className={style.recomendation}>Рекомендации</span>
-                <span className={style.seeAll}>Все</span>
+            <div className={style.titlesBlock}>
+                <span className={style.title1}>Рекомендации</span>
+                <span className={style.title2}>Все</span>
             </div>
-            <div className={style.recomendationWrapper}>
+            <div className={style.recomendationsWrapper}>
                 <Recomendation />
                 <Recomendation />
                 <Recomendation />
