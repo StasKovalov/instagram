@@ -3,14 +3,15 @@ import style from "./index.module.scss";
 
 const classNames = require('classnames');
 
-const Text = ({ children, links, userName, infoAccount, realName, aboutAccount, bold }) => {
-
+const Text = ({ children, links, userName, infoAccount, realName, aboutAccount, title, subtitle, bold }) => {
     let textStyle = classNames(style.text, {
         [style.links]: links,
         [style.userName]: userName,
         [style.infoAccount]: infoAccount,
         [style.realName]: realName,
         [style.aboutAccount]: aboutAccount,
+        [style.title]: title,
+        [style.subtitle]: subtitle,
         [style.bold]: bold
     })
 

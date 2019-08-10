@@ -3,10 +3,12 @@ import style from "./index.module.scss";
 
 const classNames = require('classnames');
 
-const Avatar = ({profilePage, mainPageSidebar, src}) => {
-    let avatarStyle = classNames({
+const Avatar = ({ profilePage, Sidebar, StoryRecomend, List, src}) => {
+    const avatarStyle = classNames({
         [style.profile]: profilePage,
-        [style.main]: mainPage,
+        [style.Sidebar]: Sidebar,
+        [style.StoryRecomend]: StoryRecomend,
+        [style.List]: List,
     })
     return (
         < div className={avatarStyle} >

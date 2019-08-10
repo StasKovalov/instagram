@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Card, { CardSkeleton } from "@molecules/Main/Card";
+import Card, { CardSkeleton } from "@molecules/Main/List/Card";
 import style from "./index.module.scss";
 
 const getFakeArray = (n = 10) => Array(n).fill();

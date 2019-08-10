@@ -14,6 +14,8 @@
     flex-shrink: 0;
 }
 
+//============ProfilePage============//
+
 .userName {
     font-weight: 300;
     font-size: 28px;
@@ -36,7 +38,6 @@
     }
 }
 
-
 .realName {
   font-size: 15px;
   margin-bottom: 5px;
@@ -45,6 +46,31 @@
 .aboutAccount {
       font-size: 15px;
 }
+
+//============ProfilePage============//
+
+
+
+//============MainPage============//
+
+.title {
+    font-size: 14px;
+    color: #262626;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    font-size: 12px;
+    line-height: 13px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #999;
+}
+
+//============MainPage============//
 
 .bold {
     color: #262626;

@@ -20,8 +20,19 @@
 }
 
 
-.main-sidebar {
+.Sidebar {
     border: 1px solid rgba(0,0,0,.0975);
+    overflow: hidden;
+    border-radius: 50%;
+
+      @media screen and (min-width:$screen-sm) {
+         width: 60px;
+         height: 60px;
+    }
+}
+
+.StoryRecomend {
+     border: 1px solid rgba(0,0,0,.0975);
     overflow: hidden;
     border-radius: 50%;
 
@@ -30,3 +41,5 @@
          height: 50px;
     }
 }
+
+.List {}
