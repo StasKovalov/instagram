@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './index.module.scss';
 
-import Icon from '../../../../atoms/Icon';
+import Icon from '@atoms/Icon';
 
 const LINKS = ['ПУБЛИКАЦИИ', 'IGTV', 'СОХРАНЕНО', 'ОТМЕТКИ'];
 

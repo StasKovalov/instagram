@@ -3,6 +3,8 @@ import style from "./index.module.scss";
 
 const classNames = require('classnames');
 
+console.log(123)
+
 const Text = ({ children, links, userName, infoAccount, realName, aboutAccount, title, subtitle, bold }) => {
     let textStyle = classNames(style.text, {
         [style.links]: links,

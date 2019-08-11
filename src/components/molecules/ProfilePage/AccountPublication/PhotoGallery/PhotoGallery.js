@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./index.module.scss";
 
-import Photo from "../../../../atoms/Photo";
+import Photo from "@atoms/Photo";
 
 
 const PhotoGallery = props => {

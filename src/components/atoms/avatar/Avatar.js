@@ -3,8 +3,6 @@ import style from "./index.module.scss";
 
 const classNames = require('classnames');
 
-//
-
 const Avatar = ({ profilePage, Sidebar, StoryRecomend, List, src}) => {
     const avatarStyle = classNames({
         [style.profile]: profilePage,
