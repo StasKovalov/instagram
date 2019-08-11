@@ -7,7 +7,11 @@ import Main from "@pages/Main";
 /*
 const App = () => (
   <Layout>
-    <Main/>
+    <Switch>
+      <Main/>
+      <Login/>
+      <Profile/>
+    </Switch>
   </Layout>
 );
 */
