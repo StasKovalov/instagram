@@ -1,15 +1,16 @@
 @import '../../../scss/variables.scss';
 .container {
-  max-width: 935px;
   display: flex;
   width: 100%;   
+  max-width: 935px;
+  position: relative;
 }
 
 @media screen and (max-width: 1024px) {
   .container {
-    max-width: 935px;
     display: flex;
     width: 100%;   
+    max-width: 935px;
     justify-content: center;
   }
 }

@@ -24,7 +24,7 @@ class Sidebar extends Component  {
     render() {
         const {scrolled} = this.state;
         const sidebarStyle = classNames(style.sidebar, {
-            [style.scrolled]: scrolled
+            // [style.scrolled]: scrolled
         })
         return (
             <div className={sidebarStyle}>
