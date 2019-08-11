@@ -8,9 +8,12 @@ import Sidebar from "@organisms/Main/Sidebar";
 const Main = props => (
   <Layout>
     <div className={style.container}>
+      <List/>
       <Sidebar/>
     </div>
   </Layout>
 );
 
 export default Main;
+
+

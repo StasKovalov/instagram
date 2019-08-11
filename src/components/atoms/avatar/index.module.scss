@@ -20,7 +20,7 @@
 }
 
 
-.Sidebar {
+.sidebar {
     border: 1px solid rgba(0,0,0,.0975);
     overflow: hidden;
     border-radius: 50%;
@@ -31,7 +31,7 @@
     }
 }
 
-.StoryRecomend {
+.storyRecomend {
      border: 1px solid rgba(0,0,0,.0975);
     overflow: hidden;
     border-radius: 50%;
@@ -42,4 +42,12 @@
     }
 }
 
-.List {}
+.list {
+    border: 1px solid rgba(0,0,0,.0975);
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+    
+}

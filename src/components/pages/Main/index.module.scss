@@ -1,5 +1,10 @@
+@import '../../../scss/variables.scss';
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
+  max-width: 935px;
+  display: flex;
+  width: 100%;   
+  
+  @media screen and (max-width: 1024px) {
+      justify-content: center;
+    }
 }

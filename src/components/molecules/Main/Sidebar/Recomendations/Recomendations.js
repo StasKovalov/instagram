@@ -15,10 +15,6 @@ const Recomendations = props => {
                 <Recomendation />
                 <Recomendation />
                 <Recomendation />
-                <Recomendation />
-                <Recomendation />
-                <Recomendation />
-                <Recomendation />
             </div>
         </div>
     )

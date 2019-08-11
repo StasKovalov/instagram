@@ -6,9 +6,9 @@ const classNames = require('classnames');
 const Avatar = ({ profilePage, Sidebar, StoryRecomend, List, src}) => {
     const avatarStyle = classNames({
         [style.profile]: profilePage,
-        [style.Sidebar]: Sidebar,
-        [style.StoryRecomend]: StoryRecomend,
-        [style.List]: List,
+        [style.sidebar]: Sidebar,
+        [style.storyRecomend]: StoryRecomend,
+        [style.list]: List,
     })
     return (
         < div className={avatarStyle} >

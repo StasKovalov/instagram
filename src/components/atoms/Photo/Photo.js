@@ -1,9 +1,15 @@
 import React from "react";
 import style from './index.module.scss';
 
-const Photo = ({ children }) => {
+const classNames = require('classnames');
+
+const Photo = ({ profilePhoto, mainPhoto,  children }) => {
+    const photoStyle = classNames({
+        [style.profilePhoto]: profilePhoto,
+        [style.mainPhoto]: mainPhoto,
+    })
     return (
-        <div className={style.photo}>
+        <div className={photoStyle}>
             {children}
         </div>
     )

@@ -9,7 +9,6 @@ const Layout = ({ children }) => (
     <Header />
     <div className={style.inner}>
       {children}
-      <Footer />
     </div>
   </section>
 );
