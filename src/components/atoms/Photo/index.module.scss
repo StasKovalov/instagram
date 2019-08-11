@@ -1,6 +1,6 @@
 @import '../../../scss/variables.scss';
 
-.photo {
+.profilePhoto {
     width: 33.33%;
     &:nth-child(-n+3) {
         padding-top: 0px;
@@ -12,4 +12,7 @@
     @media screen and (max-width:$screen-sm-max) {
          padding: 3px;
     }
+}
+
+.profileMain {
 }

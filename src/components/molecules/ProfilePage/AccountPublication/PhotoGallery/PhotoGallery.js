@@ -7,12 +7,12 @@ import Photo from "../../../../atoms/Photo";
 const PhotoGallery = props => {
     return (
         <div className={style.accountPhoto}>
-            <Photo><img className={style.img} src={require('../../../../../assets/AccountPhoto/1.jpg')}/></Photo>
-            <Photo><img className={style.img} src={require('../../../../../assets/AccountPhoto/1.jpg')} /></Photo>
-            <Photo><img className={style.img} src={require('../../../../../assets/AccountPhoto/1.jpg')} /></Photo>
-            <Photo><img className={style.img} src={require('../../../../../assets/AccountPhoto/1.jpg')} /></Photo>
-            <Photo><img className={style.img} src={require('../../../../../assets/AccountPhoto/1.jpg')} /></Photo>
-            <Photo><img className={style.img} src={require('../../../../../assets/AccountPhoto/1.jpg')} /></Photo>
+            <Photo profilePhoto><img className={style.img} src={require('../../../../../assets/AccountPhoto/1.jpg')}/></Photo>
+            <Photo profilePhoto><img className={style.img} src={require('../../../../../assets/AccountPhoto/1.jpg')} /></Photo>
+            <Photo profilePhoto><img className={style.img} src={require('../../../../../assets/AccountPhoto/1.jpg')} /></Photo>
+            <Photo profilePhoto><img className={style.img} src={require('../../../../../assets/AccountPhoto/1.jpg')} /></Photo>
+            <Photo profilePhoto><img className={style.img} src={require('../../../../../assets/AccountPhoto/1.jpg')} /></Photo>
+            <Photo profilePhoto><img className={style.img} src={require('../../../../../assets/AccountPhoto/1.jpg')} /></Photo>
         </div>
     )
 }
