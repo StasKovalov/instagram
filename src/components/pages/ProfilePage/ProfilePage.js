@@ -1,20 +1,19 @@
 import React from 'react';
 import style from './index.module.scss';
 
-import Layout from "../Layout";
-import Footer from "@organisms/Footer";
 import AccountInfo from "@organisms/ProfilePage/AccountInfo";
 import AccountPublication from "@organisms/ProfilePage/AccountPublication";
 
 const ProfilePage = props => {
     return (
-        <Layout>
+        <div className={style.inner}>
             <main className={style.main}>
-                <AccountInfo />
+                <div className={style.accountInfMargin}>
+                    <AccountInfo />
+                </div>
                 <AccountPublication />
             </main>
-            <Footer />
-        </Layout> 
+        </div>
     )
 }
 

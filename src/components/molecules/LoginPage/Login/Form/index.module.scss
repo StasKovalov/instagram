@@ -2,14 +2,9 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-
-       .loginInput, .signInButton {
-        font-family: 'Montserrat', sans-serif;
-        width: 100%;
-        margin: 0 auto;
-    }
+    align-items: center;
     
-    .signInButton {
+.signInButton {
          padding: 5px 2px;
          margin-top: 10px;
          background: #3897f0;
@@ -17,17 +12,27 @@
          font-size: 12px;
          font-weight: 600;
          border: none;
+         width: 265px;
          border-radius: 4px;
-    }
+         &:disabled {
+            opacity: .3;
+         }
+}
 
-    @media (min-width: 450px) {
-        .loginInput, .signInButton  {
-     max-width: 265px;
-        }
-    }
+@media (min-width: 450px) {
+.loginInput, .signInButton  {
+        max-width: 265px;
+        width: 100%;
+}
+}
 
-     .loginInput  {
-         input {
+@media (max-width: 449px) {
+.loginInput, .signInButton  {
+        width: 100%;
+}
+}
+
+.loginInput  {
          border: 1px solid #efefef;
          width: 100%;
          background: #fafafa;
@@ -37,7 +42,6 @@
          padding: 10px 4px;
          &::placeholder {
              font-size: 11px;
-         }
          }
      }
 }

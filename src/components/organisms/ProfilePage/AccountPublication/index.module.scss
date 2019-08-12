@@ -4,12 +4,4 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    @media screen and (min-width:$screen-sm) {
-             margin-top: 100px;
-          }  
-
-           @media screen and (max-width:$screen-xs-max) {
-               margin-top: 50px;
-          }  
 }

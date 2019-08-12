@@ -8,26 +8,9 @@ import Recomendations from "@molecules/Main/Sidebar/Recomendations"
 const classNames = require('classnames');
 
 class Sidebar extends Component  {
-    state = {
-        scrolled: false
-    }
-
-    componentDidMount() {
-        window.addEventListener('scroll', () => {
-            console.log(window.scrollY);
-            const isTop = window.scrollY < 100;
-            if (!isTop) { this.setState({ scrolled: true }) }
-            else { this.setState({ scrolled: false }) }
-        })
-    }
-
     render() {
-        const {scrolled} = this.state;
-        const sidebarStyle = classNames(style.sidebar, {
-            // [style.scrolled]: scrolled
-        })
         return (
-            <div className={sidebarStyle}>
+            <div className={style.sidebar}>
                 <ProfileInfo />
                 <Stories />
                 <Recomendations />

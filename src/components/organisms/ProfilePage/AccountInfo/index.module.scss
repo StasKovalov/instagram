@@ -1,36 +1,51 @@
 @import '../../../../scss/variables.scss';
 .accountInfo {
     display: flex;
+}
+
+.info {
+     display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width:$screen-sm) {
+.accountInfo {
+    margin-left: 50px;
+}
+.info {
+    width: 100%;
+}
+}
+
+@media screen and (max-width:$screen-sm-max) {
+    .accountInfo {
+        align-items: center;
+    }
 
     .info {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
+        justify-content: space-between;
     }
+}
 
-     @media screen and (min-width:$screen-sm) {
-        margin-left: 50px;
+@media screen and (max-width:$screen-xs-max) {
+     .accountInfo {
+        justify-content: center;
     }
+}
 
-    @media screen and (max-width:$screen-sm-max) {
-        align-items: center;
-        .info {
-            justify-content: space-between;
-        }
-    }
 
-     @media screen and (min-width:421px) {
-             .avatarWrap {
+@media screen and (min-width:421px) {
+     .avatarWrap {
         margin-right: 70px;
     }
-    }
+}
 
     
-
-     @media screen and (max-width:420px) {
-        flex-direction: column;
-         .info {
-            align-items: center;
-        }
+@media screen and (max-width:420px) {
+    .accountInfo {
+       flex-direction: column;
     }
+    .info {
+        align-items: center;
+        }
 }

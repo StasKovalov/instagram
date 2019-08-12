@@ -12,7 +12,6 @@ const LoginPage = props => {
         <img className={style.image} alt="iphone-img" src={loginPhoneImage} />
         <Login />
       </main>
-      <Footer/>
     </section>
   );
 };

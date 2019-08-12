@@ -6,12 +6,12 @@ import List from "@organisms/Main/List";
 import Sidebar from "@organisms/Main/Sidebar";
 
 const Main = props => (
-  <Layout>
+  <div className={style.inner}>
     <div className={style.container}>
-      <List/>
-      <Sidebar/>
+      <List />
+      <Sidebar />
     </div>
-  </Layout>
+  </div>
 );
 
 export default Main;

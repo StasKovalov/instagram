@@ -7,9 +7,8 @@ import Footer from "@organisms/Footer"
 const Layout = ({ children }) => (
   <section className={style.layout}>
     <Header />
-    <div className={style.inner}>
       {children}
-    </div>
+      <Footer/>
   </section>
 );
 
