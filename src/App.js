@@ -28,7 +28,11 @@ const App = () => (
 const App = ({isAuth}) => (
   <Layout>
     <Switch>
-      <Route path="/" render={() => (isAuth ? <Main /> : <LoginPage/>  )}/>
+      <Route path="/" exact render={() => (isAuth ? <Main /> : <LoginPage/>  )}/>
+      <Route path="/profile/:username" render={({ match}) => {
+        const {username} = match.params;
+        return <ProfilePage username={username}/>} 
+      } />
     </Switch>
   </Layout>
 );

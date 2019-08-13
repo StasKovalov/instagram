@@ -6,10 +6,10 @@ import Button from '../../../../atoms/Button';
 import Icon from '../../../../atoms/Icon';
 
 
-const AccountSettings = () => {
+const AccountSettings = ({username}) => {
     return (
         <div className = {style.settings}>
-            <Text userName>username</Text>
+            <Text userName>{username}</Text>
             <div className={style.editItems}> 
                 <Button editProfile>Редактировать профиль</Button>
                 <Icon><span className={style.settingsIcon} /></Icon>

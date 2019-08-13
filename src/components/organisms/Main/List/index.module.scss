@@ -1,11 +1,17 @@
 .list {
   display: flex;
   flex-direction: column;
-  max-width: calc(100% - 320px);
+  max-width: 600px;
   width: 100%;
-  margin-right: 40px;
 }
 
 .cardWrapper {
   margin-bottom: 60px;
+}
+
+@media screen and (min-width: 1024px) {
+    .list {
+     max-width: calc(100% - 320px);
+     margin-right: 40px;
+}
 }

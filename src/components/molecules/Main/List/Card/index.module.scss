@@ -12,6 +12,43 @@
   }
 }
 
+.userTitle {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+
+    .user {
+        display: flex;
+        align-items: center;
+        .username {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            color: #262626;
+            font-weight: 600;
+        }
+    }
+    
+    .icon {
+        display: block;
+    background: url('../../../../../assets/icons-image-size-m.png');
+    background-repeat: no-repeat;
+    background-position: -340px -156px;
+    height: 24px;
+    width: 24px;
+}
+}
+
+.userRate {
+     font-family: 'Montserrat', sans-serif;
+     margin: 10px 0px;
+     .rate {
+            font-size: 14px;
+            color: #262626;
+            font-weight: 600;
+        }
+}
+
+
 .image {
   display: block;
   width: 100%;

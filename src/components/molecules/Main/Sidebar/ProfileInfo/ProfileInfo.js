@@ -14,7 +14,6 @@ const ProfileInfo = (props) => {
                 />
             <div className={style.nicknames}>
                 <Text title>staskovalov</Text>
-                <Text subtitle>Stas Kovalov</Text>
             </div>
         </div>
     )

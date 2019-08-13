@@ -10,8 +10,6 @@ const Text = ({ children, links, userName, infoAccount, realName, aboutAccount, 
         [style.links]: links,
         [style.userName]: userName,
         [style.infoAccount]: infoAccount,
-        [style.realName]: realName,
-        [style.aboutAccount]: aboutAccount,
         [style.title]: title,
         [style.subtitle]: subtitle,
         [style.bold]: bold

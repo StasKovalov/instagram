@@ -5,13 +5,14 @@ import PublicationSections from "@molecules/ProfilePage/AccountPublication/Publi
 import PhotoGallery from "@molecules/ProfilePage/AccountPublication/PhotoGallery";
 import AccountStat from "@molecules/ProfilePage/AccountInfo/AccountStat"
 
-const AccountPublication = props => {
+const AccountPublication = ({ user }) => {
+    const { counts, publications } = user;
     return (
-    <div className = {style.accountPublication}>
-        <AccountStat tablet/>
-        <PublicationSections/>
-        <PhotoGallery/>
-    </div>
+        <div className={style.accountPublication}>
+            <AccountStat counts={counts} tablet />
+            <PublicationSections />
+            <PhotoGallery publications={publications} />
+        </div>
     )
 }
 

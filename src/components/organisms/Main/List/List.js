@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import Card, { CardSkeleton } from "@molecules/Main/List/Card";
 import style from "./index.module.scss";
 
+import {connect} from "react-redux";
+import {random} from "../../../../utils";
+
 const getFakeArray = (n = 10) => Array(n).fill();
 const DEFAULT_COUNT = 10;
 const FAKE_DATA = getFakeArray(5).map((_, i) => ({
-  title: `Title-${i}`,
-  description: `Lorem ipsum dolor sit-${i}`,
   image:
     "https://x.kinja-static.com/assets/images/logos/placeholders/default.png"
 }));
@@ -40,6 +41,8 @@ class List extends Component {
 
   render() {
     const { isLoading, isError, data } = this.state;
+    const { users, main_pictures} = this.props
+    console.log(users);
     return (
       <div className={style.list}>
         {(() => {
@@ -55,9 +58,13 @@ class List extends Component {
             default:
               return (
                 data &&
-                data.map(card => (
-                  <div key={card.title} className={style.cardWrapper}>
-                    <Card {...card} />
+                users.map(user => (
+                  <div key={user.id} className={style.cardWrapper}>
+                    <Card 
+                      username={user.username}
+                      full_name={user.full_name}
+                      profile_picture={user.profile_picture}
+                      image={user.publications[0]}/>
                   </div>
                 ))
               );
@@ -68,4 +75,11 @@ class List extends Component {
   }
 }
 
-export default List;
+const mapStateToProps = state => {
+  return {
+    users: state.users,
+    main_pictures: state.main_pictures
+}
+}
+
+export default connect(mapStateToProps)(List);
