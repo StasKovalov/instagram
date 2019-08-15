@@ -25,6 +25,20 @@
 .myProfile {
     background-position: -234px -274px;
 }
-
 }
+
+.link {
+    text-decoration: none;
+    outline: none;
+    &:active,  &:visited ,  &:focus  {
+        text-decoration: none;
+        outline: none;
+        border: 0;
+    }
+    &:active {
+       opacity: 0.7;
+    }
+}
+
+
 

@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./index.module.scss";
 
-import {connect} from "react-redux";
+import {Link} from "react-router-dom";
 
 import avatarImg from "../../../../../assets/example-profile-img.jpg";
 import Avatar from "@atoms/Avatar";
@@ -9,21 +9,12 @@ import Avatar from "@atoms/Avatar";
 const ProfileInfo = ({authUser}) => {
     return (
         <div className={style.profileInfo}>
-            <Avatar
-                Sidebar
-                src={avatarImg} 
-                />
+            <Link className={style.link} to={`/${authUser}`}><Avatar Sidebar src={avatarImg} /></Link>
             <div className={style.nicknames}>
-                <span className={style.authUser}>{authUser}</span>
+                <Link className={style.link} to={`/${authUser}`}><span className={style.authUser}>{authUser}</span></Link>
             </div>
         </div>
     )
-}
-
-const mapStateToProps = state => {
-    return {
-        authUser: state.authUser
     }
-}
 
-export default connect(mapStateToProps)(ProfileInfo);
+export default ProfileInfo;

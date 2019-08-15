@@ -9,7 +9,7 @@ const IconSections = ({authUser}) => {
         <div className={style.iconSections}>
             <Icon ><span className={style.searchPeople} /></Icon>
             <Icon ><span className = {style.likesPublications}/></Icon>
-            <Link to={`/${authUser}`}><Icon ><span className = {style.myProfile}/></Icon></Link>
+            <Link className={style.link} to={`/${authUser}`}><Icon ><span className = {style.myProfile}/></Icon></Link>
         </div>
     )
 }
