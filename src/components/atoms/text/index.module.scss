@@ -5,6 +5,8 @@
     font-size: 16px;
 }
 
+//============LoginPage============//
+
 .links {
     color: #003569;
     font-size: 11px;
@@ -13,6 +15,10 @@
     margin-top: 10px;
     flex-shrink: 0;
 }
+
+//============LoginPage============//
+
+
 
 //============ProfilePage============//
 
@@ -39,29 +45,6 @@
 }
 
 //============ProfilePage============//
-
-
-
-//============MainPage============//
-
-.title {
-    font-size: 14px;
-    color: #262626;
-    font-weight: 600;
-    margin-bottom: 6px;
-}
-
-.subtitle {
-    font-size: 12px;
-    line-height: 13px;
-    font-weight: 500;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    color: #999;
-}
-
-//============MainPage============//
 
 .bold {
     color: #262626;

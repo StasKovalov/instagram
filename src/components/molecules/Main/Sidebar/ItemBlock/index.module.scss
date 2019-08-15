@@ -1,4 +1,4 @@
-.recomendations {
+.itemBlock {
     display: flex;
     flex-direction: column;
     background: #fff;
@@ -18,11 +18,11 @@
         margin-bottom: 10px;
         border-radius: 4px;
 
-        .title1, .title2 {
+        .title, .all {
             cursor: pointer;
         }
 
-        .title2 {
+        .all {
             color: #262626;
             font-size: 12px;
         }

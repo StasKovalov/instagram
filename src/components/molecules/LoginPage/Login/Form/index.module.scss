@@ -33,13 +33,16 @@
 }
 
 .loginInput  {
+         padding: 10px 20px;
          border: 1px solid #efefef;
          width: 100%;
+         text-overflow: ellipsis;
+         font-family: 'Montserrat', sans-serif;
+         font-size: 13px;
          background: #fafafa;
          border-radius: 2px;
          margin-bottom: 5px;
          box-sizing: border-box;
-         padding: 10px 4px;
          &::placeholder {
              font-size: 11px;
          }

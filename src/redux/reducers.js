@@ -1,5 +1,4 @@
 import * as types from "./constans";
-import { random, shuffle } from "../utils";
 
 const publication = [
     'https://picua.org/images/2019/08/13/1b1cc9dfc62c6810f1ffc72ac80bb899.jpg',
@@ -91,7 +90,7 @@ const publication = [
 const initialState = {
     isAuth: false,
     users: [
-        {
+            {
             id: 1,
             username: "alexey_ratuch",
             full_name: "Alexey Ratuch",
@@ -103,26 +102,27 @@ const initialState = {
                 followed_by: 1
             },
             publications: [
-                "https://picua.org/images/2019/08/13/28f9ce2bef16f8dade896a4ac5c2b04b.jpg",
-                "https://picua.org/images/2019/08/13/2f1b1299c987d461d626aa1d3719548e.jpg",
-                "https://picua.org/images/2019/08/13/b439520d5b55c762a851e6d3ffba8c45.jpg",
-                "https://picua.org/images/2019/08/13/0a2e65e021b532268d5423923f104090.jpg",
-                "https://picua.org/images/2019/08/13/cbaa7e7ed72c2b11ce74a7af092fe781.jpg",
-                "https://picua.org/images/2019/08/13/86bfa6bc611bc3c8c4ac12f9f55fbf33.jpg",
-                "https://picua.org/images/2019/08/13/db87d1ff69944217b027374ffcc27b2f.jpg",
-                "https://picua.org/images/2019/08/13/5e8aeb053ae84c559e22d455dc128c74.jpg",
-                "https://picua.org/images/2019/08/13/d6badb16399911218dc55022996438dc.jpg",
-                "https://picua.org/images/2019/08/13/6b5b26c59ff742e6390ba4874848b4ba.jpg",
-                "https://picua.org/images/2019/08/13/c82fbe08fe98e7e2ed1bb37f94547d1e.jpg",
-                "https://picua.org/images/2019/08/13/e14cc85af7d59687dcd9e78178c587f8.jpg",
-                "https://picua.org/images/2019/08/13/d949eeda4119713f086afe2a71ffd971.jpg",
-                "https://picua.org/images/2019/08/13/19c44c42715097e17ced41d91941ca85.jpg",
-                "https://picua.org/images/2019/08/13/d3e6bbfd3fea07b432ca3c7f8d298b62.jpg",
-                "https://picua.org/images/2019/08/13/13a50572e5dc29d9f95930bbc62a9462.jpg",
-                "https://picua.org/images/2019/08/13/e41b603293e2f17d03c6eb47871bd5ba.jpg",
-                "https://picua.org/images/2019/08/13/76179f89f3758ed2b73b3e2d21a99732.jpg",
-                "https://picua.org/images/2019/08/13/fcdf987ae427f9720bf6fb24290048fa.jpg",
-                "https://picua.org/images/2019/08/13/f5dd18732bbea91e7d97d997e162f7a4.jpg"
+                'https://picua.org/images/2019/08/13/1b1cc9dfc62c6810f1ffc72ac80bb899.jpg',
+                'https://picua.org/images/2019/08/13/ca8b47c5ef47adac87e2df434e0c84c6.jpg',
+                'https://picua.org/images/2019/08/13/e7fbf5154da4dd42cfb8cff1c455ddb6.jpg',
+                'https://picua.org/images/2019/08/13/afd6156d0044686c7e1acbe83e30f524.jpg',
+                'https://picua.org/images/2019/08/13/713eef3fd0cc620e9c64f3da176ac973.jpg',
+                'https://picua.org/images/2019/08/13/6a091bc501bb981720123a8c99c6545f.jpg',
+                'https://picua.org/images/2019/08/13/395d9547172279a621ef9c98f1fae115.jpg',
+                'https://picua.org/images/2019/08/13/72c783e645d074ae84dbfa40b173528f.jpg',
+                'https://picua.org/images/2019/08/13/0524df6c615005e536ff1ae28e5e6f1d.jpg',
+                'https://picua.org/images/2019/08/13/a9b0a262c77f5cc84e8931605d021cee.jpg',
+                'https://picua.org/images/2019/08/13/28f9ce2bef16f8dade896a4ac5c2b04b.jpg',
+                'https://picua.org/images/2019/08/13/2f1b1299c987d461d626aa1d3719548e.jpg',
+                'https://picua.org/images/2019/08/13/b439520d5b55c762a851e6d3ffba8c45.jpg',
+                'https://picua.org/images/2019/08/13/0a2e65e021b532268d5423923f104090.jpg',
+                'https://picua.org/images/2019/08/13/cbaa7e7ed72c2b11ce74a7af092fe781.jpg',
+                'https://picua.org/images/2019/08/13/86bfa6bc611bc3c8c4ac12f9f55fbf33.jpg',
+                'https://picua.org/images/2019/08/13/db87d1ff69944217b027374ffcc27b2f.jpg',
+                'https://picua.org/images/2019/08/13/5e8aeb053ae84c559e22d455dc128c74.jpg',
+                'https://picua.org/images/2019/08/13/d6badb16399911218dc55022996438dc.jpg',
+                'https://picua.org/images/2019/08/13/6b5b26c59ff742e6390ba4874848b4ba.jpg',
+                'https://picua.org/images/2019/08/13/c82fbe08fe98e7e2ed1bb37f94547d1e.jpg',
             ]
         },
 
@@ -266,17 +266,16 @@ const initialState = {
             ]
         },
     ],
+    authUser: null
 }
-
-const jhon = { ...initialState };
-console.log(jhon);
 
 const reducers = (state = initialState, action) => {
     switch (action.type) {
         case types.GET_AUTH:
             return {
                 ...state,
-                isAuth: true
+                isAuth: true,
+                authUser: action.authUser
             }
 
         default:

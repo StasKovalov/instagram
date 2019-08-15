@@ -4,11 +4,9 @@ import style from './index.module.scss';
 import Avatar from '../../../atoms/Avatar';
 import AccountSettings from '../../../molecules/ProfilePage/AccountInfo/AccountSettings';
 import AccountStat from '../../../molecules/ProfilePage/AccountInfo/AccountStat';
-import ExampleIMG from '../../../../assets/example-profile-img.jpg';
 
 const AccountInfo = ({user}) => {
     const { counts, full_name, username, profile_picture, bio } = user;
-    console.log(counts);
     
     return (
         <div className={style.accountInfo}>

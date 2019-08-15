@@ -25,13 +25,13 @@ const App = () => (
 );
 */
 
-const App = ({isAuth}) => (
+const App = ({ isAuth, authUser}) => (
   <Layout>
     <Switch>
       <Route path="/" exact render={() => (isAuth ? <Main /> : <LoginPage/>  )}/>
-      <Route path="/profile/:username" render={({ match}) => {
+      <Route path="/:username" render={({match}) => {
         const {username} = match.params;
-        return <ProfilePage username={username}/>} 
+        return isAuth ? <ProfilePage username={username}/> : null} 
       } />
     </Switch>
   </Layout>
@@ -39,7 +39,8 @@ const App = ({isAuth}) => (
 
 const mapStateToProps = state => {
   return {
-    isAuth: state.isAuth
+    isAuth: state.isAuth,
+    authUser: state.authUser
   }
 }
 

@@ -10,8 +10,8 @@ const AccountStat = ({ counts = {}, desktop, tablet }) => {
         [style.desktop]: desktop,
         [style.tablet]: tablet
     })
-    console.log(counts);
-    const { media, follows, followed_by } = counts;
+
+    const { media=0, follows=0, followed_by=0 } = counts;
     return (
         <div className={styleAccountStat}>
             <div className={style.publications}>

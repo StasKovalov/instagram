@@ -44,13 +44,13 @@ class Form extends Component {
     this.setState({ loginForm: updateLoginForm, isValidForm});
   }
 
-  loginClick = () => {
-
+  clickGetAuth = (value) => {
+     localStorage.setItem('authUser', value);
+     this.props.getAuth(value)
   }
 
   render() {
     const { loginForm, isValidForm  } = this.state;
-    const {getAuth} = this.props;
     const formElArray = [];
     for (const key in loginForm) {
       formElArray.push({
@@ -58,7 +58,6 @@ class Form extends Component {
         info: loginForm[key]
       })
     }
-    console.log(this.props.isAuth);
     return (
       <div className={style.loginForm}>
 
@@ -70,7 +69,7 @@ class Form extends Component {
             className={style.loginInput}
             {...formEl.info.elementConfig} />)}
 
-        <button onClick={getAuth} disabled={!isValidForm} className={style.signInButton}>Войти</button>
+        <button onClick={() => this.clickGetAuth(loginForm.login.value) } disabled={!isValidForm} className={style.signInButton}>Войти</button>
       </div>
     );
   }

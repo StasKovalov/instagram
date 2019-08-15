@@ -1,6 +1,7 @@
-.recomendation {
+.item {
     display: flex;
     align-items: center;
+    padding-bottom: 5px;
 
     .action {
         display: flex;
@@ -8,11 +9,23 @@
         font-family: 'Montserrat', sans-serif;
         margin-left: 10px;
 
+        .username {
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
         .subscribe {
             color: #3897f0;
             font-weight: 600;
             font-size: 12px;
             cursor: pointer;
+        }
+
+         .time {
+            font-size: 10px;
+            line-height: 12px;
+            color: #999;
         }
     }
 }

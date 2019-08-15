@@ -11,15 +11,21 @@
         height: 24px;
         width: 24px;
     }
+}
 
+    .scrolled {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    
     .elements {
         display: flex;
         align-items: center;
         transition: all 0.3s ease-in;
     }
 
-    .scrolled {
-        opacity: 0;
-        transform: scaleY(0);
+@media screen and (max-width: 340px) {
+    .elements {
+        display: none;
     }
 }

@@ -1,19 +1,38 @@
-import React from "react";
+import React, {Component} from "react";
 import style from "./index.module.scss";
 
+import {connect} from "react-redux";
+import {getAuth} from "../../../redux/actionCreators";
+
 import Login from "@organisms/LoginPage/Login";
-import Footer from "@organisms/Footer";
 import loginPhoneImage from "@assets/iphone-img.png";
 
-const LoginPage = props => {
-  return (
-    <section className={style.container}>
-      <main className={style.main}>
-        <img className={style.image} alt="iphone-img" src={loginPhoneImage} />
-        <Login />
-      </main>
-    </section>
-  );
+class LoginPage extends Component {
+
+  state = {
+    authUser: localStorage.getItem("authUser")
+  }
+
+  componentDidMount() {
+    const {authUser} = this.state;
+    console.log(authUser);
+    if (authUser) { this.props.getAuth(authUser)};
+  }
+
+  render() {
+    return (
+      <section className={style.container}>
+        <main className={style.main}>
+          <img className={style.image} alt="iphone-img" src={loginPhoneImage} />
+          <Login />
+        </main>
+      </section>
+    );
+  }
 };
 
-export default LoginPage;
+const mapDispatchToProps = {
+   getAuth
+}
+
+export default connect(null, mapDispatchToProps)(LoginPage);

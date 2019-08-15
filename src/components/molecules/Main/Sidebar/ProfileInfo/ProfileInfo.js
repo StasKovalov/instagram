@@ -1,11 +1,12 @@
-import React from 'react';
-import style from './index.module.scss';
+import React from "react";
+import style from "./index.module.scss";
 
-import avatarImg from '../../../../../assets/example-profile-img.jpg';
-import Avatar from '@atoms/Avatar';
-import Text from '@atoms/Text';
+import {connect} from "react-redux";
 
-const ProfileInfo = (props) => {
+import avatarImg from "../../../../../assets/example-profile-img.jpg";
+import Avatar from "@atoms/Avatar";
+
+const ProfileInfo = ({authUser}) => {
     return (
         <div className={style.profileInfo}>
             <Avatar
@@ -13,10 +14,16 @@ const ProfileInfo = (props) => {
                 src={avatarImg} 
                 />
             <div className={style.nicknames}>
-                <Text title>staskovalov</Text>
+                <span className={style.authUser}>{authUser}</span>
             </div>
         </div>
     )
 }
 
-export default ProfileInfo;
+const mapStateToProps = state => {
+    return {
+        authUser: state.authUser
+    }
+}
+
+export default connect(mapStateToProps)(ProfileInfo);
