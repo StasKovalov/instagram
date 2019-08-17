@@ -1,0 +1,67 @@
+@import "@scss/variables.scss";
+.header {
+    display: flex;
+    z-index:10;
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    height: 75px;
+    top: 0;
+    padding: 0px 20px;
+    left: 0;
+    text-align: center;
+    line-height: 75px;
+    background: #fff;
+    border-bottom: 1px solid #dbdbdb;
+    transition: all 0.4s ease-in-out;
+    .items {
+        display: flex;
+        max-width: 1010px;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        .item, .link {
+            display: flex;
+            flex-basis: calc(50% - 99.5px);
+            &:last-child {
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+.searchInput {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        background: #fafafa;
+        border: 1px solid #dbdbdb;
+        border-radius: 4px;
+        width: 199px;
+        height: 22px;
+        padding-left: 20px;
+        &::placeholder {
+            color: #999;
+            text-align: center;
+        }
+        @media screen and (max-width:$screen-xs-max) {
+            display: none;
+        }
+}
+
+.scrolled {
+    height: 50px;
+}
+
+.link {
+    text-decoration: none;
+    outline: none;
+    &:active,  &:visited ,  &:focus  {
+        text-decoration: none;
+        outline: none;
+        border: 0;
+    }
+    &:active {
+       opacity: 0.7;
+    }
+}
