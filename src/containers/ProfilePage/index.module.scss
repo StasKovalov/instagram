@@ -1,0 +1,17 @@
+@import '@scss/variables.scss';
+
+.inner {
+    width: 100%;
+    max-width: 1350px;
+ }
+
+.main {
+        max-width: 935px;
+        margin: 0 auto;
+        width: 100%;
+}
+
+.accountInfMargin {
+        margin-top: 30px;
+        margin-bottom: 50px;
+}

@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.scss";
 
-import Layout from "@pages/Layout";
-import ProfilePage from "@pages/ProfilePage";
-import Main from "@pages/Main";
+import Layout from "@components/Layout";
+import ProfilePage from "@containers/ProfilePage";
+import Main from "@containers/Main";
 import {connect} from "react-redux";
-import LoginPage from "@pages/LoginPage";
+import LoginPage from "@containers/LoginPage";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 

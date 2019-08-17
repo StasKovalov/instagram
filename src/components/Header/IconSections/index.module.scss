@@ -1,0 +1,44 @@
+.iconSections {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 125px;;
+    flex-shrink: 0;
+
+.searchPeople,
+.likesPublications,
+.myProfile {
+    // background: url('../../../../assets/icons-image-size-m.png');
+    background-repeat: no-repeat;
+    display: block;
+    width: 24px;
+    height: 24px;
+} 
+
+.searchPeople {
+ background-position: -257px -200px;
+}
+
+.likesPublications {
+    background-position: -26px -300px;
+}
+
+.myProfile {
+    background-position: -234px -274px;
+}
+}
+
+.link {
+    text-decoration: none;
+    outline: none;
+    &:active,  &:visited ,  &:focus  {
+        text-decoration: none;
+        outline: none;
+        border: 0;
+    }
+    &:active {
+       opacity: 0.7;
+    }
+}
+
+
+

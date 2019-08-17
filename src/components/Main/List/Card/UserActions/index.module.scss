@@ -1,0 +1,36 @@
+.userActions {
+  display: flex;
+  justify-content: space-between;
+
+  .mainActions {
+    display: flex;
+  }
+
+  .like,
+  .comments,
+  .share,
+  .save {
+    display: block;
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    // background: url('../../../../../../assets/icons-image-size-m.png');
+  }
+
+  .like {
+    background-position: -26px -300px;
+  }
+
+  .comments {
+    margin: 0px 15px;
+    background-position: -179px -200px;
+  }
+
+  .share {
+    background-position: -260px -326px;
+  }
+
+  .save {
+    background-position: -130px -326px;
+  }
+}

@@ -1,0 +1,44 @@
+@import '@scss/variables.scss';
+.footer {
+    font-family: 'Montserrat', sans-serif;
+    .infoBlock {
+     display: flex;
+     flex-wrap: wrap;
+     margin-bottom: 10px;
+    }
+    .inst {
+        font-size: 11px;
+        color: #999;
+        font-weight: 600;
+    }
+}
+
+
+     @media (min-width: 851px) {
+        .footer {
+            width: 100%;
+            max-width: 935px;
+        }
+    }
+
+     @media (max-width: 850px) {
+         .footer {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            max-width: 360px;
+            padding-bottom: 10px;
+         .infoBlock {
+            justify-content: center;
+            text-align: center;
+         }
+    }
+    }
+
+           @media (max-width: 450px) {
+            .footer {
+                margin-top: 40px;
+            }
+  }
+
+    

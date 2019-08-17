@@ -1,0 +1,52 @@
+@import '@scss/variables.scss';
+.avatarImg {
+    width: 100%;
+}
+
+.profile {
+    border: 1px solid rgba(0,0,0,.0975);
+    overflow: hidden;
+    border-radius: 50%;
+
+    @media screen and (max-width:$screen-xs-max) {
+         width: 110px;
+         height: 110px;
+    }
+
+      @media screen and (min-width:$screen-sm) {
+         width: 150px;
+         height: 150px;
+    }
+}
+
+
+.sidebar {
+    border: 1px solid rgba(0,0,0,.0975);
+    overflow: hidden;
+    border-radius: 50%;
+
+      @media screen and (min-width:$screen-sm) {
+         width: 60px;
+         height: 60px;
+    }
+}
+
+.storyRecomend {
+     border: 1px solid rgba(0,0,0,.0975);
+    overflow: hidden;
+    border-radius: 50%;
+
+      @media screen and (min-width:$screen-sm) {
+         width: 50px;
+         height: 50px;
+    }
+}
+
+.list {
+    border: 1px solid rgba(0,0,0,.0975);
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+}
