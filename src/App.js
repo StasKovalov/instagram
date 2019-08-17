@@ -11,6 +11,11 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 /*
 
+1) Испарвить косяки при импорте + почитать за require.
+2) Исправить  роутинг на сайте. Два раза идет рендер, плохо.
+3) Сделать users/:username.
+4) Картинки object-fit протестить.
+
 const isAuth = LocaleStorage.getItem("isAuth");
 
 const App = () => (
@@ -28,7 +33,7 @@ const App = () => (
 const App = ({ isAuth, authUser}) => (
   <Layout>
     <Switch>
-      <Route path="/" exact render={() => (isAuth ? <Main /> : <LoginPage/>  )}/>
+      <Route path="/" exact render={() => (isAuth ? <Main/> : <LoginPage/>  )}/>
       <Route path="/:username" render={({match}) => {
         const {username} = match.params;
         return isAuth ? <ProfilePage username={username}/> : null} 

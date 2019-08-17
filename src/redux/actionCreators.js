@@ -1,8 +1,6 @@
-import * as types from './constans';
+import {GET_AUTH} from './constans';
 
-export const getAuth = (username) => {
-    return {
-        type: types.GET_AUTH,
+export const getAuth = (username) => ({
+        type: GET_AUTH,
         authUser: username
-    }
-}
+})

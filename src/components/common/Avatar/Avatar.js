@@ -1,14 +1,13 @@
 import React from "react";
 import style from "./index.module.scss";
+import classNames from "classnames";
 
-const classNames = require('classnames');
-
-const Avatar = ({ profilePage, Sidebar, StoryRecomend, List, src}) => {
+const Avatar = ({ profilePage, sidebar, storyRecomend, list, src}) => {
     const avatarStyle = classNames({
         [style.profile]: profilePage,
-        [style.sidebar]: Sidebar,
-        [style.storyRecomend]: StoryRecomend,
-        [style.list]: List,
+        [style.sidebar]: sidebar,
+        [style.storyRecomend]: storyRecomend,
+        [style.list]: list,
     })
     return (
         < div className={avatarStyle} >
