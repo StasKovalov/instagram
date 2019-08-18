@@ -40,7 +40,7 @@ class List extends Component {
 
   render() {
     const { isLoading, isError, data } = this.state;
-    const { users } = this.props
+    const { users } = this.props;
     return (
       <div className={style.list}>
         {(() => {
@@ -55,15 +55,16 @@ class List extends Component {
               return <div>isError</div>;
             default:
               return (
-                data &&
-                users.map(user => (
-                  <div key={user.id} className={style.cardWrapper}>
-                    <Card
-                      username={user.username}
-                      profile_picture={user.profile_picture}
-                      image={user.publications[0]} />
-                  </div>
-                ))
+                // data &&
+                // users.map(user => (
+                //   <div key={user.id} className={style.cardWrapper}>
+                //     <Card
+                //       username={user.username}
+                //       profile_picture={user.profile_picture}
+                //       image={user.publications[0]} />
+                //   </div>
+                // ))
+                <div>123</div>
               );
           }
         })()}
@@ -74,8 +75,8 @@ class List extends Component {
 
 const mapStateToProps = state => {
   return {
-    users: state.users,
-  }
-}
+    users: state.users
+  };
+};
 
 export default connect(mapStateToProps)(List);
