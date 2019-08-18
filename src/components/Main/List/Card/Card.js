@@ -14,8 +14,8 @@ const Card = ({ image, username, profile_picture }) => {
     <div className={style.card}>
       <div className={style.userTitle}>
         <Link className={style.link} to={`/${username}`}>
-          <div data-username={username} className={style.user}>
-            <Avatar List src={profile_picture} />
+          <div className={style.user}>
+            <Avatar list src={profile_picture} />
             <span className={style.username}>{username}</span>
           </div>
         </Link>

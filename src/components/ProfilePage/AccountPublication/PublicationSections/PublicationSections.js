@@ -9,31 +9,31 @@ const PublicationSections = () => {
     return (
         <ul className={style.accountPublication}>
             <li className={style.liContainer}>
-                <Icon sizeM>
-                    <span className={style.myPhotos} />
+                <Icon>
+                    <button className={style.myPhotos} />
                 </Icon>
-                <span className={style.sectionName}>{LINKS[0]}</span>
+                <span className={style.sectionName}>ПУБЛИКАЦИИ</span>
             </li>
 
             <li className={style.liContainer}>
-                <Icon sizeM>
-                    <span className={style.igtv} />
+                <Icon>
+                    <button className={style.igtv} />
                 </Icon>
-                <span className={style.sectionName}>{LINKS[1]}</span>
+                <span className={style.sectionName}>IGTV</span>
             </li>
 
             <li className={style.liContainer}>
-                <Icon sizeM>
-                    <span className={style.savedPublications} />
+                <Icon>
+                    <button className={style.savedPublications} />
                 </Icon>
-                <span className={style.sectionName}>{LINKS[2]}</span>
+                <span className={style.sectionName}>СОХРАНЕНО</span>
             </li>
 
             <li className={style.liContainer}>
-                <Icon sizeM>
-                    <span className={style.marks} />
+                <Icon>
+                    <button className={style.marks} />
                 </Icon>
-                <span className={style.sectionName}>{LINKS[3]}</span>
+                <span className={style.sectionName}>ОТМЕТКИ</span>
             </li>
         </ul>
     )

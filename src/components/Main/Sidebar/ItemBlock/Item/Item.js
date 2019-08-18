@@ -8,7 +8,7 @@ const Item = ({ username, time, subscribe }) => {
     return (
         <div className={style.item}>
             <Avatar
-                StoryRecomend
+                storyRecomend
                 src={avatarImg}
             />
             <div className={style.action}>

@@ -1,7 +1,6 @@
 import React from 'react';
 import style from './index.module.scss';
-
-const classNames = require('classnames');
+import classNames from "classnames";
 
 const Line = ({vertical, horizontal, loginPage, header}) => {
 

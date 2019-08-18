@@ -1,3 +1,5 @@
+import {Route} from "react-router-dom";
+
 export const checkValidity = (value) => {
    return value.trim() !== '';
 }
@@ -17,3 +19,4 @@ export const shuffle = (arr) => {
    }
    return randArr;
 }
+

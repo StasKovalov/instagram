@@ -3,7 +3,7 @@
           display: flex;
     .settingsIcon {
         display: block;
-        // background: url('./../../../../assets/icons-image-size-m.png');
+        background: url('../../../../assets/icons-image-size-m.png');
         background-repeat: no-repeat;
         background-position: -234px -326px;
         height: 24px;
@@ -42,5 +42,13 @@
 
      @media screen and (max-width:$screen-sm-max) {
        margin-right: 15px;
+    }
+}
+
+.text {
+    margin-bottom: 15px;
+
+      @media screen and (max-width:420px) {
+       margin-top: 15px;
     }
 }

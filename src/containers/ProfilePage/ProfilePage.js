@@ -18,7 +18,7 @@ class ProfilePage extends Component  {
     }
 
     render() {
-        const { username, authUser } = this.props;
+        const { username, authUser,users } = this.props;
         let { user } = this.state;
         if (authUser === username) {
             user = {
@@ -38,9 +38,9 @@ class ProfilePage extends Component  {
             <div className={style.inner}>
                 <main className={style.main}>
                     <div className={style.accountInfMargin}>
-                        <AccountInfo user={user ? user : {}}/>
+                        <AccountInfo authUser={authUser} user={users[0]}/>
                     </div>
-                    <AccountPublication user={user ? user : {}}/>
+                    <AccountPublication user={users[0]}/>
                 </main>
             </div>
         )

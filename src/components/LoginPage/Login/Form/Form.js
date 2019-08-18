@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import style from "./index.module.scss";
 
-import {connect} from "react-redux";
-import {getAuth} from "@redux/actionCreators";
-import { checkValidity} from '@utils';
+import { connect } from "react-redux";
+import { getAuth } from "@redux/actionCreators";
+import { checkValidity } from '@utils';
+
+import { ClipLoader} from "react-spinners";
 
 class Form extends Component {
   state = {
@@ -26,12 +28,12 @@ class Form extends Component {
       },
     },
     loading: false,
-    isValidForm: false
+    isValidForm: false,
   }
 
   inputChangeHandler = (event, key) => {
-    const updateLoginForm = {...this.state.loginForm};
-    const updateLoginEl = {...updateLoginForm[key]};
+    const updateLoginForm = { ...this.state.loginForm };
+    const updateLoginEl = { ...updateLoginForm[key] };
     updateLoginEl.value = event.target.value;
     updateLoginEl.validation = checkValidity(event.target.value);
     updateLoginForm[key] = updateLoginEl;
@@ -41,16 +43,21 @@ class Form extends Component {
       isValidForm = updateLoginForm[key].validation && isValidForm;
     }
 
-    this.setState({ loginForm: updateLoginForm, isValidForm});
+    this.setState({ loginForm: updateLoginForm, isValidForm });
   }
 
   clickGetAuth = (value) => {
-     localStorage.setItem('authUser', value);
-     this.props.getAuth(value)
+    this.setState({ loading: true })
+    const { getAuth } = this.props;
+    localStorage.setItem('authUser', value);
+    localStorage.setItem('isAuth', true);
+    getAuth(value);
+    setTimeout(() => this.setState({ loading: false }), 1000);
+    
   }
 
   render() {
-    const { loginForm, isValidForm  } = this.state;
+    const { loginForm, isValidForm, loading } = this.state;
     const formElArray = [];
     for (const key in loginForm) {
       formElArray.push({
@@ -58,6 +65,7 @@ class Form extends Component {
         info: loginForm[key]
       })
     }
+
     return (
       <div className={style.loginForm}>
 
@@ -69,16 +77,20 @@ class Form extends Component {
             className={style.loginInput}
             {...formEl.info.elementConfig} />)}
 
-        <button onClick={() => this.clickGetAuth(loginForm.login.value) } disabled={!isValidForm} className={style.signInButton}>Войти</button>
+        <button
+          onClick={() => this.clickGetAuth(loginForm.login.value)}
+          disabled={!isValidForm} className={style.signInButton}>
+          {loading ? <ClipLoader color={'rgba(255, 255, 255, 0.5)'} size={15} /> : "Войти"}
+        </button>
       </div>
     );
   }
 };
 
 const mapStateToProps = (state) => {
-    return {
-      isAuth: state.isAuth
-    }
+  return {
+    isAuth: state.isAuth
+  }
 }
 
 const mapDispatchToProps = {

@@ -16,6 +16,8 @@
     .marks {
       display: block;
       background-repeat: no-repeat;
+      border: none;
+      outline: none;
     }
 
     @media screen and (min-width: $screen-md) {
@@ -34,21 +36,34 @@
       .igtv,
       .savedPublications,
       .marks {
-        // background: url('../../../../../assets/icons-image-size-s.png');
+        background: url('../../../../assets/icons-image-size-s.png');
         height: 12px;
         width: 12px;
       }
       .myPhotos {
         background-position: -274px -337px;
+        &:focus {
+            background-position: -260px -337px;
+        }
       }
       .igtv {
         background-position: -330px -337px;
+         &:focus {
+            background-position: -316px -337px;
+        }
       }
       .savedPublications {
         background-position: -42px -361px;
+        width: 10px;
+         &:focus {
+            background-position: -393px -258px;
+        }
       }
       .marks {
         background-position: -246px -337px;
+         &:focus {
+              background-position: -288px -337px;
+        }
       }
     }
 
@@ -60,7 +75,7 @@
       .igtv,
       .savedPublications,
       .marks {
-        // background: url('../../../../../assets/icons-image-size-m.png');
+        background: url('../../../../assets/icons-image-size-m.png');
         height: 24px;
         width: 24px;
       }

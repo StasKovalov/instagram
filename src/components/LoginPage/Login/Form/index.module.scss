@@ -5,7 +5,8 @@
     align-items: center;
     
 .signInButton {
-         padding: 5px 2px;
+         padding: 0px 2px;
+         height: 30px;
          margin-top: 10px;
          background: #3897f0;
          color: white;
@@ -16,6 +17,9 @@
          border-radius: 4px;
          &:disabled {
             opacity: .3;
+         }
+         &:active {
+             opacity: 0.6;
          }
 }
 
