@@ -32,7 +32,7 @@ const App = () => (
 );
 */
 
-const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+const currentUser = localStorage.getItem("currentUser");
 
 if (currentUser) {
   store.dispatch(setCurrentUser(currentUser));
@@ -44,7 +44,7 @@ const App = () => (
       <Route path="/" exact render={() => <Redirect to="/main" />} />
       <Route path="/login" exact component={LoginPage} />
       <PrivateRoute path="/main" exact component={Main} />
-      <PrivateRoute path="/user/:username" exact component={ProfilePage} />
+      <PrivateRoute path="/user/:username" component={ProfilePage} />
     </Switch>
   </Layout>
 );

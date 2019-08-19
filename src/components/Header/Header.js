@@ -3,10 +3,10 @@ import style from "./index.module.scss";
 
 import InstagramLogo from "./InstagramLogo";
 import IconSections from "./IconSections";
+
+import classNames from "classnames";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-
-const classNames = require("classnames");
 
 class Header extends Component {
   state = {
@@ -52,9 +52,9 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = ({currentUser}) => {
   return {
-    authUser: state.authUser
+    authUser: currentUser.authUser
   };
 };
 

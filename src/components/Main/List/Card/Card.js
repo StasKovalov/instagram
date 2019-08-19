@@ -13,7 +13,10 @@ const Card = ({ image, username, profile_picture }) => {
   return (
     <div className={style.card}>
       <div className={style.userTitle}>
-        <Link className={style.link} to={`/${username}`}>
+        <Link className={style.link} to={{
+              pathname:`/user/${username}`,
+              state: { username: username}
+          }}>
           <div className={style.user}>
             <Avatar list src={profile_picture} />
             <span className={style.username}>{username}</span>

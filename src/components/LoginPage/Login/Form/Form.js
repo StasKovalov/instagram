@@ -52,7 +52,6 @@ class Form extends Component {
     const { setCurrentUser } = this.props;
     const currentUser = this.state.loginForm.login.value;
     localStorage.setItem("currentUser", currentUser);
-    // localStorage.setItem('isAuth', true);
     setCurrentUser(currentUser);
     setTimeout(() => this.props.history.push("/main"), 1000);
   };

@@ -1,13 +1,12 @@
 import React, {Component} from "react";
 import style from "./index.module.scss";
 
-import {connect} from "react-redux";
 import ProfileInfo from "./ProfileInfo";
 import ItemBlock from "./ItemBlock";
 
 class Sidebar extends Component  {
     render() {
-        const {authUser} = this.props;
+        const { authUser } = this.props;
         return (
             <div className={style.sidebar}>
                 <ProfileInfo authUser={authUser} />
@@ -18,10 +17,4 @@ class Sidebar extends Component  {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        authUser: state.authUser
-    }
-}
-
-export default connect(mapStateToProps)(Sidebar);
+export default Sidebar;
