@@ -15,10 +15,12 @@ class List extends Component {
       <div className={style.list}>
         {users.map(user => (
         <div key={user.id} className={style.cardWrapper}>
-          <Card
-            username={user.username}
-            profile_picture={user.profile_picture}
-            image={user.publications[0]} />
+          <Card 
+              profile_picture={user.profile_picture}
+              username={user.username}
+              image={user.publications[0].photoURL}
+              likes={user.publications[0].counts.likes}
+              comments={user.publications[0].comments} />
         </div>))}
       </div>
     )

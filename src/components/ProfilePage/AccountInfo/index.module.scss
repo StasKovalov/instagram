@@ -41,14 +41,19 @@
     .info {
         justify-content: space-between;
     }
-}
 
-@media screen and (max-width:$screen-xs-max) {
-     .accountInfo {
+      .accountInfo {
         justify-content: center;
     }
-}
 
+    .accountAbout {
+        margin-top: 20px;
+    }
+
+    .aboutAccount {
+        margin-top: 5px;
+    }
+}
 
 @media screen and (min-width:421px) {
      .avatarWrap {

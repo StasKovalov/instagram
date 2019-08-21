@@ -8,8 +8,8 @@ const PhotoGallery = ({ publications }) => {
 
     return (
         <div className={style.accountPhoto}>
-            {publications && publications.map((publication, idx) => {
-                return <Photo key={idx} profilePhoto><img className={style.img} src={publication} /></Photo>
+            {publications && publications.map((publication) => {
+                return <Photo key={publication.id} profilePhoto><img className={style.img} src={publication.photoURL} /></Photo>
             })}
         </div>
     )
