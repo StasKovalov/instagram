@@ -26,8 +26,9 @@ export const shufflePhoto = (max, arr) => {
       counts: {
          likes: random(50, max),
          comments: 0
-      }}))
-   }
+      }
+   }))
+}
 
 
 const publications = [
@@ -125,159 +126,43 @@ const comments = ['Как в жизни, так и здесь – легко, к
    'Давно не видел таких красивых фотографий!', 'А говорят мужчины не модели… Ты потрясающе позируешь!', 'А можно эта фотография станет моей самой любимой?'
 ];
 
+// const users = [
 
-const usernames = [
+//    usernameG: 'alina_malechko',
+
+//    username: '_nazik_boyko__777',
+
+//    username: 'troitskiydmitriy',
+
+//    username: 'roberttsuguryan',
    
-   {
-   
-   
-   },
-   {
-     
-   },
-   {
-      
+//    username: 'bakalymroman',
 
-   },
-   {
-   },
-   {
-   },
-   {
+//    usernameG: 'oliaklishchova',
 
-   },
-   {
-   },
-   {
-   },
-   {
-   },
-   {
-     
-   },
-   {
-   },
-   {
-   },
-   {
-      
-   },
-   {
-      
-   },
-   {
-     
-   },
-   {
-     
-   },
-   {
-     
-   },
-   {
-      
-   },
-   {
-      
-   },
-   {
-      
-   },
-   {
-      
-   },
-   {
-     
-   },
-   {
-     
-   },
-   {
-      
-   },
-   {
-      
-   },
-   {
-      
-   },
-   {
-     
-   },
-   {
-      
-   },
-   {
-      
-   },
-   {
-      
-   },
-   {
-     
-   },
-   {
-      
-   },
-   {
-     
-   },
-   {
-     
-   },
-   {
-     
-   },
-   {
-     
-   },
-   {
-     
-   },
-   {
-     
-   },
-   {
-      
-   },
-   {
-     
-   },
-   {
-      
-   },
-   {
-     
-   },
-   {
-      
-   },
-   {
-     
-   },
-   {
-      
-   },
-   {
-       
-      username: 'pasha.novoselov',
-      full_name: 'Паша Новоселов'
-   },
-   {
-      profile_picture: '', 
-      
-   },
-   {
-     
-   },
-   {
-      
-   },
-   {
-     
-   },
+//    usernameG: '_emi_ly',
 
-]
+//    username: 'pigarkinanton',
+
+//    username: 'milkshedy',
+
+//    usernameG: 'jyzzy_',
+
+//    username: '_b.r.o_d.y_a.g.a_',
+
+//    username: '_zheka_polikarpov_',
+
+//    username: 'jack_jsteele',
+
+//    usernameG: 'diana.suhovetska17',
+
+//    username: 't.a.r.e.kxoxo',
+
+// //    usernameG: 'ninaivkova',
+
+// //    usernameG: '_a__menshikova_',
+// //    username:'milkshedy',
+//       username: 'ania4935',]
 
 
 // const media = random(1, 40);

@@ -33,9 +33,7 @@ class Header extends Component {
     return (
       <div
         className={styleHeader}
-        onClick={() => localStorage.removeItem("authUser")}
       >
-        {localStorage.getItem("currentUser") ? "in system" : "is not in system"}
         <div className={style.items}>
           <Link className={style.link} to="/">
             <div className={style.item}>

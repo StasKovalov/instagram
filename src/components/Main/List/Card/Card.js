@@ -11,9 +11,8 @@ import UserComment from "./UserComment";
 
 class Card extends Component {
 
-  redner() {
+  render() {
     const { profile_picture, username, image, likes, comments} = this.props;
-    console.log(comments)
     return (
       <div className={style.card}>
         <div className={style.userTitle}>
@@ -40,7 +39,7 @@ class Card extends Component {
           <div className={style.userRate}>
             <span className={style.rate}>{`${likes}`.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')} отметок "Нравится"</span>
           </div>
-          {comments.map(comment => <UserComment userComment={comment}/>)}
+          {comments && comments.map(comment => <UserComment userComment={comment}/>)}
         </div>
       </div>
     );

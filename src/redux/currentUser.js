@@ -19,13 +19,11 @@ const initialState = {
         {
           id: "vaqyfox", photoURL: "https://picua.org/images/2019/08/13/d6badb16399911218dc55022996438dc.jpg",
           comments: [{
-            username: 'username',
-            photoURL: 'url',
+            username: 'molodoy_optimict',
             comment: 'А можно эта фотография станет моей самой любимой?'
           },
           {
-            username: 'username',
-            photoURL: 'url',
+            username: 'pigarkinanton', 
             comment: 'Как бы я хотела оказаться рядом с тобой на этом фото.'
           }],
           counts: {
@@ -37,18 +35,15 @@ const initialState = {
         {
           id: "xwpodwo", photoURL: "https://picua.org/images/2019/08/13/2f1b1299c987d461d626aa1d3719548e.jpg",
           comments: [{
-            username: 'username',
-            photoURL: 'url',
+            username: 'diana.suhovetska17',
             comment: 'Я в шоке... А можно увидеть такую красоту вживую?'
           },
           {
-            username: 'username',
-            photoURL: 'url',
+            username: 'ninaivkova',
             comment: 'Как в жизни, так и здесь – легко, красиво и прекрасно!'
           },
           {
-            username: 'username',
-            photoURL: 'url',
+            username: 'jack_jsteele',
             comment: 'Такая фотография не должна быть здесь, она должна блистать на обложке глянцевого журнала!'
           }],
           counts: {
@@ -138,13 +133,11 @@ const initialState = {
         {
           id: "y880pff", photoURL: "https://picua.org/images/2019/08/13/fd979c348202e1cfa7f92e1c52d45780.jpg",
           comments: [{
-            username: 'username',
-            photoURL: 'url',
+            username: '_a__menshikova_',
             comment: 'Можно увидеть такую красоту вживую?'
           },
           {
-            username: 'username',
-            photoURL: 'url',
+            username: 'alina_malechko',
             comment: 'Если бы сегодня мне не показали эту фотографию, то я бы думал, что в жизни уже и не осталось ничего прекрасного, но как вижу, это не так!'
           }],
           counts: {
@@ -315,13 +308,11 @@ const initialState = {
         {
           id: "ukvee1h", photoURL: "https://picua.org/images/2019/08/13/76179f89f3758ed2b73b3e2d21a99732.jpg",
           comments: [{
-            username: 'username',
-            photoURL: 'url',
+            username: '_zheka_polikarpov_',
             comment: 'Вот если бы на этом фото был бы ещё и я, то получилась бы самая лучшая семейная фотография в мире.'
           },
           {
-            username: 'username',
-            photoURL: 'url',
+            username: 'jyzzy_',
             comment: 'А говорят мужчины не модели… Ты потрясающе позируешь!'
           }],
           counts: {
@@ -356,8 +347,7 @@ const initialState = {
         {
           id: "d42cvmh", photoURL: "https://picua.org/images/2019/08/13/28f9ce2bef16f8dade896a4ac5c2b04b.jpg",
           comments: [{
-            username: 'username',
-            photoURL: 'url',
+            username: 'roberttsuguryan',
             comment: 'Твоя фотография настолько прекрасна, что у меня появилось желание обклеить ей весь мир!'
           }],
           counts: {
@@ -582,18 +572,15 @@ const initialState = {
           id: "256oqqf",
           photoURL: "https://picua.org/images/2019/08/13/8e786cb9e8fda255476afed7ac4da14d.jpg",
           comments: [{
-            username: 'username',
-            photoURL: 'url',
+            username: 'oliaklishchova',
             comment: 'А говорят мужчины не модели… Ты потрясающе позируешь!'
           },
           {
-            username: 'username',
-            photoURL: 'url',
+            username: '_b.r.o_d.y_a.g.a_',
             comment: 'Давно не видел таких красивых фотографий!'
           },
           {
-            username: 'username',
-            photoURL: 'url',
+            username: 'bakalymroman',
             comment: ' Видимо не важно кто снимает, важно кого фотографируют!'
           }],
           "counts": {
@@ -613,8 +600,7 @@ const initialState = {
           {
           id: "h37ae7d", photoURL: "https://picua.org/images/2019/08/13/3b0d92dc0428ee401ea283bc5d7b3104.jpg",
           comments: [{
-            username: 'username',
-            photoURL: 'url',
+            username: '_nazik_boyko__777',
             comment: 'Давно не видел таких красивых фотографий!'
           }],
           "counts": {
@@ -1464,7 +1450,14 @@ const initialState = {
         {
           "id": "r2qoqw2",
           "photoURL": "https://picua.org/images/2019/08/13/e41b603293e2f17d03c6eb47871bd5ba.jpg",
-          "comments": [],
+          "comments": [{
+            username: '_emi_ly',
+            comment: 'Боже, как же это мило...'
+          },
+            {
+              username: 'milkshedy',
+              comment: 'Еще и эффект такой наложили, круть!!'
+            }],
           "counts": {
             "likes": 4467,
             "comments": 0
@@ -2052,7 +2045,22 @@ const initialState = {
         {
           "id": "dtdw0kv",
           "photoURL": "https://picua.org/images/2019/08/13/b0206dd6c27e7baf7dd464119387fbcc.jpg",
-          "comments": [],
+          "comments": [{
+            username: 'alina_malechko',
+            comment: 'Какой красавчик! Тебе девушка не нужна?'
+          },
+            {
+              username: 't.a.r.e.kxoxo',
+              comment: 'Братан, ну ты на высоте, как всегда'
+            },
+            {
+              username: 'ninaivkova',
+              comment: 'Ты случайно не актер?'
+            },
+            {
+              username: 'jack_jsteele',
+              comment: 'Я вспомнил, где ты снимался. Мотылек, крутой фильм, кстате.'
+            }],
           "counts": {
             "likes": 790,
             "comments": 0
@@ -2652,7 +2660,10 @@ const initialState = {
         {
           "id": "pb8hg68",
           "photoURL": "https://picua.org/images/2019/08/13/e666e469c9a349a03a4770286faf45f2.jpg",
-          "comments": [],
+          "comments": [{
+            username: 'diana.suhovetska17',
+            comment: 'Машинка ниче так, прокатиш?'
+          }],
           "counts": {
             "likes": 174,
             "comments": 0
@@ -3456,7 +3467,14 @@ const initialState = {
         {
           "id": "bon4h54",
           "photoURL": "https://picua.org/images/2019/08/13/91239e5622e3e98a9b11157108e236ec.jpg",
-          "comments": [],
+          "comments": [{
+            username: 'vildanazuraeva',
+            comment: 'ооо, ты фотографируеш? Я очень хочу научиться.'
+          },
+            {
+              username: 'b_dmitr',
+              comment: 'Я знаю, кого ты будеш завтра фотографировать))'
+            } ],
           "counts": {
             "likes": 1032,
             "comments": 0
@@ -3765,7 +3783,14 @@ const initialState = {
         {
           "id": "6c4w0vj",
           "photoURL": "https://picua.org/images/2019/08/13/c82fbe08fe98e7e2ed1bb37f94547d1e.jpg",
-          "comments": [],
+          "comments": [{
+            username: 'milkshedy',
+            comment: 'Просто посмотрите, какая красивая природа у нас!'
+          },
+            {
+              username: 'artemiivoitov',
+              comment: 'Завораживающе. Наверное сильная гроза была тогда!?'
+            }],
           "counts": {
             "likes": 1502,
             "comments": 0
@@ -4428,7 +4453,14 @@ const initialState = {
         {
           "id": "qngh0wu",
           "photoURL": "https://picua.org/images/2019/08/13/17d338cdbaaa7a3a3a13d7f012316dad.jpg",
-          "comments": [],
+          "comments": [{
+            username: 'jyzzy_',
+            comment: 'Крутой концерт был, это было волшебно.'
+          },
+            {
+              username: 'pigarkinanton',
+              comment: 'Макс Корж - лучшийй!'
+            }],
           "counts": {
             "likes": 7769,
             "comments": 0
@@ -4728,7 +4760,14 @@ const initialState = {
         {
           "id": "kn6n8m8",
           "photoURL": "https://picua.org/images/2019/08/13/db87d1ff69944217b027374ffcc27b2f.jpg",
-          "comments": [],
+          "comments": [{
+            username: 'ninaivkova',
+            comment: 'Вам пора уже на пенсию, а не в фильмах сниматься!'
+          },
+            {
+              username: 'ania4935',
+              comment: 'ninaivkova, не согласна, дед еще нормально играет.'
+            }],
           "counts": {
             "likes": 7705,
             "comments": 0
@@ -5149,28 +5188,23 @@ const initialState = {
           "id": "7hmckta",
           "photoURL": "https://picua.org/images/2019/08/13/ba947ee56df7d343cab97d51992dc8bc.jpg",
           "comments": [{
-            username: 'username',
-            photoURL: 'url',
+            username: 'jack_jsteele',
             comment: 'Давно не видел таких красивых фотографий!'
           },
             {
-              username: 'username',
-              photoURL: 'url',
+              username: 'oliaklishchova',
               comment: 'Такая фотография не должна быть здесь, она должна блистать на обложке глянцевого журнала!'
             },
             {
-              username: 'username',
-              photoURL: 'url',
+              username: '_zheka_polikarpov_',
               comment: ' Как бы я хотела оказаться рядом с тобой на этом фото.'
             },
             {
-              username: 'username',
-              photoURL: 'url',
+              username: '_nazik_boyko__777',
               comment: 'Твоё фото как магнит, тянет и тянет, и не смысла и сил для сопротивления!'
             },
             {
-              username: 'username',
-              photoURL: 'url',
+              username: 'pigarkinanton',
               comment: 'Это фото всегда будет со мной, я сохраню прекрасный образ в своём сердце!'
             }],
           "counts": {
@@ -7149,7 +7183,18 @@ const initialState = {
         {
           "id": "fajrgml",
           "photoURL": "https://picua.org/images/2019/08/13/06c0e75defc64e653e7f8a0a6b273709.jpg",
-          "comments": [],
+          "comments": [{
+            username: 'oliaklishchova',
+            comment: 'Прекрасный исполнитель!'
+          },
+            {
+              username: 'jyzzy_',
+              comment: 'Я не улыбаюсь))'
+            },
+            {
+              username: 'artemiivoitov',
+              comment: 'Неплохая фотография'
+            },],
           "counts": {
             "likes": 5905,
             "comments": 0
@@ -7392,7 +7437,18 @@ const initialState = {
         {
           "id": "tfg7tvr",
           "photoURL": "https://picua.org/images/2019/08/13/28f9ce2bef16f8dade896a4ac5c2b04b.jpg",
-          "comments": [],
+          "comments": [{
+            username: 'bakalymroman',
+            comment: 'Наверное фотали, когда понял, что взяли на джуна?'
+          },
+            {
+              username: 't.a.r.e.kxoxo',
+              comment: 'Ты еще джун?'
+            },
+            {
+              username: 'ania4935',
+              comment: 'Ох, уж эти программисты'
+            },],
           "counts": {
             "likes": 176,
             "comments": 0
@@ -7839,7 +7895,10 @@ const initialState = {
         {
           "id": "4gkeygt",
           "photoURL": "https://picua.org/images/2019/08/13/67ad860f4385b8e72880607b386e10a3.jpg",
-          "comments": [],
+          "comments": [{
+            username: '_a__menshikova_',
+            comment: 'Мультибрендовый?'
+          }],
           "counts": {
             "likes": 2476,
             "comments": 0
@@ -8112,7 +8171,10 @@ const initialState = {
         {
           "id": "as5orb0",
           "photoURL": "https://picua.org/images/2019/08/13/713eef3fd0cc620e9c64f3da176ac973.jpg",
-          "comments": [],
+          "comments": [{
+            username: 'vildanazuraeva',
+            comment: 'Том Харди - крут!'
+          }],
           "counts": {
             "likes": 4156,
             "comments": 0
@@ -8277,7 +8339,30 @@ const initialState = {
         {
           "id": "ngai3pb",
           "photoURL": "https://picua.org/images/2019/08/13/2f1b1299c987d461d626aa1d3719548e.jpg",
-          "comments": [],
+          "comments": [{
+            username: 'milkshedy',
+            comment: 'Офигенное фото, почему так мало лайков?'
+          },
+            {
+              username: '_nazik_boyko__777',
+              comment: 'Давно не видел таких красивых фотографий!'
+            },
+          {
+            username: 'roberttsuguryan',
+            comment: 'Я хочу тебе сказать, что эта фотография, это лучшее, что я видел в жизни!'
+            },
+          {
+            username: 'pigarkinanton',
+            comment: 'Твоя фотография настолько прекрасна, что у меня появилось желание обклеить ей весь мир!'
+            },
+          {
+            username: 'oliaklishchova',
+            comment: 'Такая фотография не должна быть здесь, она должна блистать на обложке глянцевого журнала!'
+            },
+          {
+            username: '_b.r.o_d.y_a.g.a_',
+              comment: 'Ну, ниче так!'
+            }],
           "counts": {
             "likes": 609,
             "comments": 0
