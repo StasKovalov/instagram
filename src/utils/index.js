@@ -22,10 +22,13 @@ export const shufflePhoto = (max, arr) => {
    return randPhoto.map(photo => ({
       id: uid(),
       photoURL: photo,
-      comments: [],
+      comments: Array(random(0,10)).fill(1).map(el => (
+            {username:users[random(0, users.length)],
+            comment: lorem.slice(random(0,10), random(1,))
+            })),
       counts: {
          likes: random(50, max),
-         comments: 0
+         comments: comments.length
       }
    }))
 }
@@ -126,60 +129,18 @@ const comments = ['Как в жизни, так и здесь – легко, к
    'Давно не видел таких красивых фотографий!', 'А говорят мужчины не модели… Ты потрясающе позируешь!', 'А можно эта фотография станет моей самой любимой?'
 ];
 
-// const users = [
+const users = ['alina_malechko', '_nazik_boyko__777', 'troitskiydmitriy', 'roberttsuguryan', 'bakalymroman', 'oliaklishchova', '_emi_ly', 'pigarkinanton',
+               'milkshedy', 'jyzzy_', '_b.r.o_d.y_a.g.a_', '_zheka_polikarpov_', 'jack_jsteele', 'diana.suhovetska17', 'artemiivoitov', 't.a.r.e.kxoxo', 
+               'ninaivkova', '_a__menshikova_', 'milkshedy', 'ania4935', '_ka__rin__ka_', 'b_dmitr', 'artem.arc', 'samanthaming', 'tr.al.v','vildanazuraeva'];
 
-//    usernameG: 'alina_malechko',
-
-//    username: '_nazik_boyko__777',
-
-//    username: 'troitskiydmitriy',
-
-//    username: 'roberttsuguryan',
-   
-//    username: 'bakalymroman',
-
-//    usernameG: 'oliaklishchova',
-
-//    usernameG: '_emi_ly',
-
-//    username: 'pigarkinanton',
-
-//    username: 'milkshedy',
-
-//    usernameG: 'jyzzy_',
-
-//    username: '_b.r.o_d.y_a.g.a_',
-
-//    username: '_zheka_polikarpov_',
-
-//    username: 'jack_jsteele',
-
-//    usernameG: 'diana.suhovetska17',
-
-//    username: 't.a.r.e.kxoxo',
-
-// //    usernameG: 'ninaivkova',
-
-// //    usernameG: '_a__menshikova_',
-// //    username:'milkshedy',
-//       username: 'ania4935',]
+const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis tincidunt id aliquet risus feugiat in ante. Vulputate mi sit amet mauris commodo quis. Morbi tempus iaculis urna id volutpat lacus laoreet non. Morbi tempus iaculis urna id volutpat lacus laoreet. Nec dui nunc mattis enim ut. Sit amet tellus cras adipiscing enim eu turpis egestas pretium. Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Purus in mollis nunc sed id semper risus in hendrerit. Non arcu risus quis varius quam quisque id. Aliquam sem fringilla ut morbi tincidunt. Lectus quam id leo in vitae. Consequat semper viverra nam libero justo laoreet sit amet cursus. Sit amet venenatis urna cursus eget nunc scelerisque. Id diam vel quam elementum pulvinar etiam non quam. Praesent tristique magna sit amet purus. Feugiat in ante metus dictum at tempor commodo. Ipsum dolor sit amet consectetur adipiscing elit. Ac turpis egestas sed tempus urna et pharetra pharetra.'
 
 
-// const media = random(1, 40);
-// const follows = random(50, 10000);
+const media = random(1, 84);
+const follows = random(50, 10000);
 
 // const randomUser = () => {
 //    return {
-//       id: uid(),
-//       username: "username",
-//       full_name: "full_name",
-//       profile_picture: "profile_photo",
-//       bio: "quots",
-//       counts: {
-//          media: media,
-//          follows: follows,
-//          followed_by: random(1, 500)
-//       },
 //       publications: shufflePhoto(follows, publications.slice(0)).slice(0, media)
 //    };
 // }
