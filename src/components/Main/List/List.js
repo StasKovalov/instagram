@@ -19,6 +19,7 @@ class List extends Component {
               profile_picture={user.profile_picture}
               username={user.username}
               image={user.publications[0].photoURL}
+              imageId={user.publications[0].id}
               likes={user.publications[0].counts.likes}
               comments={user.publications[0].comments} />
         </div>))}

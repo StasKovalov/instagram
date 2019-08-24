@@ -65,3 +65,55 @@
 .link {
   text-decoration: none;
 }
+
+.photoWrapper {
+  position: relative;
+}
+
+.heartWrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.animationHeart {
+    display: none;
+    background: url('../../../../assets/icons-image-size-s.png');
+    background-repeat: no-repeat;
+    background-position: 0 -98px;
+    height: 81px;
+    width: 92px;
+}
+
+.liked {
+    display: block;
+    animation-duration: 1000ms;
+    animation-name: like-heart-animation;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+    transform: scale(0);
+}
+
+@keyframes like-heart-animation {
+0%, 100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+15% {
+    opacity: .9;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+30% {
+    -webkit-transform: scale(.95);
+    transform: scale(.95);
+}
+45%, 80% {
+    opacity: .9;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+}
+

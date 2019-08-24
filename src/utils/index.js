@@ -144,7 +144,7 @@ const lorem = ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed
                 'Consequat semper viverra nam libero justo laoreet sit amet cursus.', ]
 
 
-const media = 71;
+const media = 33;
 const follows = random(50, 10000);
 
 const randomUser = () => {
