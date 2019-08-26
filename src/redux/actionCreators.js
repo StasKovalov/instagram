@@ -5,12 +5,12 @@ export const setCurrentUser = user => ({
   payload: user
 });
 
-export const likeCurrentUser = (user, id) => ({
-  type: LIKE_CURRENT_USER,
-  payload: {user, id}
-});
+export const likeCurrentUser = (username, photoId) => ({
+    type: LIKE_CURRENT_USER,
+    payload: { username, photoId }
+})
 
-export const unlikeCurrentUser = (user, id) => ({
+export const unlikeCurrentUser = (username, photoId) => ({
   type: UNLIKE_CURRENT_USER,
-  payload: { user, id }
+  payload: { username, photoId }
 });

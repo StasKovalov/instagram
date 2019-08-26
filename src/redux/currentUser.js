@@ -26280,8 +26280,57 @@ const initialState = {
       ]
     }
   ],
-  likedUserPhotos: []
+  likedUsers: []
 };
+
+const updateLikesCount = (publication, quantity) => {
+  const { counts } = publication;
+  return {
+    ...publication,
+    counts: {
+      comments: counts.comments,
+      likes: counts.likes + quantity
+    }
+  }
+}
+
+const updateLikedPublications = (userName, photoId, likedUser = {} ) => {
+  const { username = userName, publications = []} = likedUser;  
+
+  return {
+    username,
+    publications: [photoId, ...publications]
+  }
+}
+
+const updateLikedUsers = (likedUsers, updLikedUser, index) => {
+  if(index < 0) {
+    return [
+      updLikedUser,
+      ...likedUsers
+    ]
+  }
+  return [
+    ...likedUsers.slice(0, index),
+    updLikedUser,
+    ...likedUsers.slice(index + 1)
+  ]
+}
+
+const updatePublicationCount = (state, payload, quantity) => {
+  const { users } = state;
+  const { username, photoId } = payload;
+  const user = users.find(user => user.username === username);
+  const userPublications = users.find(user => user.username === username).publications;
+  const publicationIndx = userPublications.findIndex(publication => publication.id === photoId);
+  const publication = userPublications[publicationIndx];
+  const updPublication = updateLikesCount(publication, quantity);
+  userPublications[publicationIndx] = updPublication;
+  user.publications = userPublications;
+
+  return user;
+}
+
 
 const reducers = (state = initialState, { type, payload }) => {
   switch (type) {
@@ -26292,77 +26341,52 @@ const reducers = (state = initialState, { type, payload }) => {
         authUser: payload
       };
 
-    case LIKE_CURRENT_USER: {
-      const likedUser = payload.username;
-      const likedPhotoId = payload.id;
-      const updUserPublications = state.users.find(user => user.username === likedUser).publications;
-      const updPublicationLikes = updUserPublications.find(publication => publication.id === likedPhotoId);
-      const updPublicationLikesIndx = updUserPublications.findIndex(publication => publication.id === likedPhotoId);
-      updPublicationLikes.counts.likes = ++updPublicationLikes.counts.likes;
-      updUserPublications[updPublicationLikesIndx] = updPublicationLikes;
+    case LIKE_CURRENT_USER: 
+      const { username, photoId } = payload;
+      const userIndx = state.users.findIndex(user => user.username === username);
+      const updUser = updatePublicationCount(state, payload, 1)
 
-      const likedUserPhotos = [...state.likedUserPhotos];
-      const updLikedUser = likedUserPhotos.find(user => user.username === likedUser);
-      const userIndx = likedUserPhotos.findIndex(user => user.username === likedUser);
-      if(updLikedUser) {
-        updLikedUser.likedPhotos.shift(likedPhotoId);
-        likedUserPhotos[userIndx] = updLikedUser;
-              return {
-            ...state,
-            users:updUserPublications,
-            likedUserPhotos
+      const likedUserIndx = state.likedUsers.findIndex(user => user.username === username);
+      const likedUser = state.likedUsers.find(user => user.username === username);
+      const updLikedUser = updateLikedPublications(username, photoId, likedUser, likedUserIndx);
+
+      return {
+        ...state,
+        users: [
+          ...state.users.slice(0, userIndx),
+          updUser,
+          ...state.users.slice(userIndx + 1)
+        ],
+        likedUsers: updateLikedUsers(state.likedUsers, updLikedUser, likedUserIndx)
+      };
+
+    case UNLIKE_CURRENT_USER:
+      console.log("UNLIKE_CURRENT_USER")
+      const { username: userName, photoId: photoID } = payload;
+      const userIndex = state.users.findIndex(user => user.username === userName);
+      const updateUser = updatePublicationCount(state, payload, -1)
+
+      const unlikedUserIndx = state.likedUsers.findIndex(user => user.username === userName);
+      const unlikedUser = state.likedUsers.find(user => user.username === userName);
+      const newUnlikeUser = {
+        ...unlikedUser,
+        publications: unlikedUser.publications.filter(publication => publication !== photoID)
       }
-      } else {
-          const newLikedUser = {
-          username: likedUser,
-          likedPhotos: [likedPhotoId]
-        }
 
-        likedUserPhotos.shift(newLikedUser);
-
-        return {
-          ...state,
-           users:updUserPublications,
-          likedUserPhotos
-        }
-      }
-    }
-
-    case UNLIKE_CURRENT_USER: {
-      const likedUser = payload.username;
-      const likedPhotoId = payload.id;
-      const updUserPublications = state.users.find(user => user.username === likedUser).publications;
-      const updPublicationLikes = updUserPublications.find(publication => publication.id === likedPhotoId);
-      const updPublicationLikesIndx = updUserPublications.findIndex(publication => publication.id === likedPhotoId);
-      updPublicationLikes.counts.likes = ++updPublicationLikes.counts.likes;
-      updUserPublications[updPublicationLikesIndx] = updPublicationLikes;
-
-      const likedUserPhotos = [...state.likedUserPhotos];
-      const updLikedUser = likedUserPhotos.find(user => user.username === likedUser);
-      const userIndx = likedUserPhotos.findIndex(user => user.username === likedUser);
-      if(updLikedUser) {
-        updLikedUser.likedPhotos.shift(likedPhotoId);
-        likedUserPhotos[userIndx] = updLikedUser;
-              return {
-            ...state,
-            users:updUserPublications,
-            likedUserPhotos
-      }
-      } else {
-          const newLikedUser = {
-          username: likedUser,
-          likedPhotos: [likedPhotoId]
-        }
-
-        likedUserPhotos.shift(newLikedUser);
-
-        return {
-          ...state,
-           users:updUserPublications,
-          likedUserPhotos
-        }
-      }
-    }
+      return {
+        ...state,
+        users: [
+          ...state.users.slice(0, userIndex),
+          updateUser,
+          ...state.users.slice(userIndex + 1)
+        ],
+        likedUsers: [
+          ...state.likedUsers.slice(0, unlikedUserIndx),
+          newUnlikeUser,
+          ...state.likedUsers.slice(unlikedUserIndx+1)
+        ]
+      };
+     
 
     default:
       return state;

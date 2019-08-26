@@ -4,7 +4,7 @@ import style from "./index.module.scss";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { likeCurrentUser } from '@redux/actionCreators';
+import { likeCurrentUser, unlikeCurrentUser } from '@redux/actionCreators';
 
 import Avatar from "@common/Avatar";
 import Icon from "@common/Icon";
@@ -17,21 +17,19 @@ class Card extends Component {
   state = {
     clickLiked: false,
     doubleClickLiked: false,
-    likes: null,
     comments: null
   }
 
   componentDidMount() {
-    const { likes, comments } = this.props;
-    this.setState({likes, comments});
+    const { comments } = this.props;
+    this.setState({comments});
   }
 
   clickLike = () => {
-    const { username, imageId } = this.props;
+    const { username, imageId, likeCurrentUser, unlikeCurrentUser } = this.props;
     if (!this.state.clickLiked) {
       this.setState((prevState) => ({
         clickLiked: true,
-        likes: prevState.likes + 1
       }))
       likeCurrentUser(username, imageId)
     } else {
@@ -39,6 +37,7 @@ class Card extends Component {
         clickLiked: false,
         likes: prevState.likes - 1
       }))
+      unlikeCurrentUser(username, imageId)
     }
   }
 
@@ -68,8 +67,9 @@ class Card extends Component {
   }
 
   render() {
-    const { profile_picture, username, image } = this.props;
-    const { clickLiked, doubleClickLiked, likes, comments} = this.state;
+    const { profile_picture, username, image, likes, likedUsers } = this.props;
+    console.log(likedUsers);
+    const { clickLiked, doubleClickLiked, comments} = this.state;
     const animationHeartStyle = classNames(style.animationHeart, {
       [style.liked]: doubleClickLiked
     })
@@ -112,8 +112,14 @@ class Card extends Component {
   }
 };
 
+const mapStateToProps = ({ currentUser}) => ({
+  likedUsers: currentUser.likedUsers,
+})
+
+
 const mapDispatchToProps = {
-  likeCurrentUser
+  likeCurrentUser,
+  unlikeCurrentUser
 }
 
-export default connect(null, mapDispatchToProps)(Card);
+export default connect(mapStateToProps, mapDispatchToProps)(Card);
