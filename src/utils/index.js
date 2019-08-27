@@ -151,5 +151,3 @@ const randomUser = () => {
    return {publications: shufflePhoto(follows, publications.slice(0)).slice(0, media)}
 }
 
-
-console.log(randomUser());

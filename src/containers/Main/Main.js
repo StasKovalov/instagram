@@ -7,7 +7,6 @@ import Sidebar from "@components/Main/Sidebar";
 import {connect} from "react-redux"
 
 const Main = ({currentUser}) => {
-  console.log(currentUser.authUser);
   return (
     <div className={style.inner}>
       <div className={style.container}>

@@ -26361,7 +26361,6 @@ const reducers = (state = initialState, { type, payload }) => {
       };
 
     case UNLIKE_CURRENT_USER:
-      console.log("UNLIKE_CURRENT_USER")
       const { username: userName, photoId: photoID } = payload;
       const userIndex = state.users.findIndex(user => user.username === userName);
       const updateUser = updatePublicationCount(state, payload, -1)

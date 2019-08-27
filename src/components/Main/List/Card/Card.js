@@ -21,8 +21,13 @@ class Card extends Component {
   }
 
   componentDidMount() {
-    const { comments } = this.props;
-    this.setState({comments});
+    const { comments, username, likedUsers, imageId } = this.props;
+    const likedUser = likedUsers.find(user => user.username === username);
+    if (likedUser) {
+      const likedPublication = likedUser.publications.find(publication => publication === imageId);
+      const liked = likedPublication ? true : false;
+      this.setState({ clickLiked: liked });
+    }
   }
 
   clickLike = () => {
@@ -42,12 +47,13 @@ class Card extends Component {
   }
 
   doubleClickLike = () => {
+    const { username, imageId, likeCurrentUser } = this.props;
     if(!this.state.clickLiked) {
       this.setState((prevState) => ({
         doubleClickLiked: true,
         clickLiked: true,
-        likes: prevState.likes +1
       }))
+      likeCurrentUser(username, imageId)
       setTimeout(() => {
         this.setState((prevState) => ({
           doubleClickLiked: false
@@ -56,7 +62,6 @@ class Card extends Component {
     } else {
       this.setState((prevState) => ({
         doubleClickLiked: true,
-        clickLiked: true
       }))
       setTimeout(() => {
         this.setState((prevState) => ({
@@ -67,9 +72,8 @@ class Card extends Component {
   }
 
   render() {
-    const { profile_picture, username, image, likes, likedUsers } = this.props;
-    console.log(likedUsers);
-    const { clickLiked, doubleClickLiked, comments} = this.state;
+    const { profile_picture, username, image, likes, comments } = this.props;
+    const { clickLiked, doubleClickLiked} = this.state;
     const animationHeartStyle = classNames(style.animationHeart, {
       [style.liked]: doubleClickLiked
     })

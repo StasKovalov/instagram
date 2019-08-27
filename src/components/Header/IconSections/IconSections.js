@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 import Icon from '@common/Icon';
 
 const IconSections = ({authUser}) => {
-    console.log(authUser);
     return (
         <div className={style.iconSections}>
             <Icon ><span className={style.searchPeople} /></Icon>
