@@ -1,4 +1,6 @@
-.accountPhoto {
+@import '../../../../scss/variables.scss';
+
+.accountPhotos {
     display: flex;
     flex-wrap: wrap;
     .img {
@@ -7,3 +9,30 @@
         object-fit: cover;
     }
 }
+
+.countsInfo {
+    display: block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    &:nth-child(-n+3) {
+        top: 0px;
+    }
+}
+    
+     @media screen and (min-width:$screen-md) {
+    .countsInfo {
+        top: 14px;
+        bottom: 14px;
+        left: 14px;
+        right: 14px;
+        }
+    }
+
+    @media screen and (max-width:$screen-sm-max) {
+    .countsInfo {
+        top: 3px;
+        bottom: 3px;
+        left: 3px;
+        right: 3px;
+        }
+    }

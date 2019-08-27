@@ -1,6 +1,7 @@
 @import '@scss/variables.scss';
 
 .profilePhoto {
+    position: relative;
     width: 33.33%;
     &:nth-child(-n+3) {
         padding-top: 0px;

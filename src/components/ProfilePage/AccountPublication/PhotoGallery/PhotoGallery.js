@@ -7,9 +7,14 @@ import Photo from "@common/Photo";
 const PhotoGallery = ({ publications }) => {
 
     return (
-        <div className={style.accountPhoto}>
+        <div className={style.accountPhotos}>
             {publications && publications.map((publication) => {
-                return <Photo key={publication.id} profilePhoto><img className={style.img} src={publication.photoURL} /></Photo>
+                return <Photo key={publication.id} profilePhoto>
+                    <img className={style.img} src={publication.photoURL} />
+                    <div className={style.countsInfo}>
+
+                    </div>
+                    </Photo>
             })}
         </div>
     )
