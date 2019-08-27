@@ -5,12 +5,12 @@ import PublicationSections from "./PublicationSections";
 import PhotoGallery from "./PhotoGallery";
 import AccountStat from '@share/AccountStat';
 
-const AccountPublication = ({ user }) => {
-    const { counts, publications } = user;
+const AccountPublication = ({ user, authUser }) => {
+    const { counts, publications, username } = user;
     return (
         <div className={style.accountPublication}>
             <AccountStat counts={counts} tablet />
-            <PublicationSections />
+            <PublicationSections authUser={authUser} username={username} />
             <PhotoGallery publications={publications} />
         </div>
     )

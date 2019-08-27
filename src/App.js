@@ -2,14 +2,14 @@ import React from "react";
 import "./App.scss";
 
 import store from "@redux/store";
-import { getAuth } from "@redux/actionCreators"
+import { setCurrentUser } from "@redux/actionCreators";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 import Layout from "@components/Layout";
 import ProfilePage from "@containers/ProfilePage";
 import Main from "@containers/Main";
 import LoginPage from "@containers/LoginPage";
-
+import PrivateRoute from "@components/PrivateRoute";
 
 /*
 
@@ -32,28 +32,19 @@ const App = () => (
 );
 */
 
-const isAuth = JSON.parse(localStorage.getItem('isAuth'));
-const authUser = localStorage.getItem('authUser');
+const currentUser = localStorage.getItem("currentUser");
 
-console.log(isAuth, authUser)
-
-if (isAuth) {
-  store.dispatch(getAuth(authUser));
+if (currentUser) {
+  store.dispatch(setCurrentUser(currentUser));
 }
 
-const PrivateRoute = ({component: Component, ...rest}) => (
-  <Route {...rest} render={(props) => (isAuth ? <Component {...props} /> : <Redirect to="/login" />)} />
-)
-
-
-const App = (props) => (
+const App = () => (
   <Layout>
     <Switch>
-      {/* <Route path="/" exact render={() => <Redirect to={isAuth ? "/main" : "/login"} />}/>
-      <Route path="/login" exact render={() => <LoginPage isAuth={isAuth}/>} />
+      <Route path="/" exact render={() => <Redirect to="/main" />} />
+      <Route path="/login" exact component={LoginPage} />
       <PrivateRoute path="/main" exact component={Main} />
-      <PrivateRoute path="/user/:username" exact component={ProfilePage} /> */}
-      <ProfilePage/>
+      <PrivateRoute path="/user/:username" component={ProfilePage} />
     </Switch>
   </Layout>
 );

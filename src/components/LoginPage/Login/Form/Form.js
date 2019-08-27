@@ -1,35 +1,36 @@
 import React, { Component } from "react";
 import style from "./index.module.scss";
 
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { getAuth } from "@redux/actionCreators";
-import { checkValidity } from '@utils';
+import { setCurrentUser } from "@redux/actionCreators";
+import { checkValidity } from "@utils";
 
-import { ClipLoader} from "react-spinners";
+import { ClipLoader } from "react-spinners";
 
 class Form extends Component {
   state = {
     loginForm: {
       login: {
         elementConfig: {
-          type: 'text',
-          placeholder: 'Номер телефона, имя пользователя или эл. адрес'
+          type: "text",
+          placeholder: "Номер телефона, имя пользователя или эл. адрес"
         },
-        value: '',
+        value: "",
         validation: false
       },
       password: {
         elementConfig: {
-          type: 'password',
-          placeholder: 'Пароль'
+          type: "password",
+          placeholder: "Пароль"
         },
-        value: '',
+        value: "",
         validation: false
-      },
+      }
     },
     loading: false,
-    isValidForm: false,
-  }
+    isValidForm: false
+  };
 
   inputChangeHandler = (event, key) => {
     const updateLoginForm = { ...this.state.loginForm };
@@ -44,17 +45,16 @@ class Form extends Component {
     }
 
     this.setState({ loginForm: updateLoginForm, isValidForm });
-  }
+  };
 
-  clickGetAuth = (value) => {
-    this.setState({ loading: true })
-    const { getAuth } = this.props;
-    localStorage.setItem('authUser', value);
-    localStorage.setItem('isAuth', true);
-    getAuth(value);
-    setTimeout(() => this.setState({ loading: false }), 1000);
-    
-  }
+  clickGetAuth = () => {
+    this.setState({ loading: true });
+    const { setCurrentUser } = this.props;
+    const currentUser = this.state.loginForm.login.value;
+    localStorage.setItem("currentUser", currentUser);
+    setCurrentUser(currentUser);
+    setTimeout(() => this.props.history.push("/main"), 1000);
+  };
 
   render() {
     const { loginForm, isValidForm, loading } = this.state;
@@ -63,38 +63,48 @@ class Form extends Component {
       formElArray.push({
         id: key,
         info: loginForm[key]
-      })
+      });
     }
 
     return (
       <div className={style.loginForm}>
-
-        {formElArray.map(formEl =>
+        {formElArray.map(formEl => (
           <input
-            onChange={(e) => this.inputChangeHandler(e, formEl.id)}
+            onChange={e => this.inputChangeHandler(e, formEl.id)}
             key={formEl.id}
             value={formEl.info.value}
             className={style.loginInput}
-            {...formEl.info.elementConfig} />)}
+            {...formEl.info.elementConfig}
+          />
+        ))}
 
         <button
-          onClick={() => this.clickGetAuth(loginForm.login.value)}
-          disabled={!isValidForm} className={style.signInButton}>
-          {loading ? <ClipLoader color={'rgba(255, 255, 255, 0.5)'} size={15} /> : "Войти"}
+          onClick={this.clickGetAuth}
+          disabled={!isValidForm}
+          className={style.signInButton}
+        >
+          {loading ? (
+            <ClipLoader color={"rgba(255, 255, 255, 0.5)"} size={15} />
+          ) : (
+            "Войти"
+          )}
         </button>
       </div>
     );
   }
-};
+}
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     isAuth: state.isAuth
-  }
-}
+  };
+};
 
 const mapDispatchToProps = {
-  getAuth
-}
+  setCurrentUser
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Form);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRouter(Form));

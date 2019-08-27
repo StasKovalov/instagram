@@ -5,7 +5,7 @@ import Avatar from '@common/Avatar';
 import AccountSettings from './AccountSettings';
 import AccountStat from '@share/AccountStat';
 
-const AccountInfo = ({user}) => {
+const AccountInfo = ({user, authUser}) => {
     const { counts, full_name, username, profile_picture, bio } = user;
     
     return (
@@ -15,7 +15,7 @@ const AccountInfo = ({user}) => {
             </div>
 
             <div className={style.info}>
-                <AccountSettings username={username}/>
+                <AccountSettings authUser={authUser} username={username}/>
                 <AccountStat counts={counts} desktop/>
                 <div className={style.accountAbout}>
                     <span className={style.realName}>{full_name}</span>

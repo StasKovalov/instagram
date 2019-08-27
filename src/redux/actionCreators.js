@@ -1,6 +1,6 @@
-import {GET_AUTH} from './constans';
+import { SET_CURRENT_USER } from "./constants";
 
-export const getAuth = (username) => ({
-        type: GET_AUTH,
-        authUser: username
-})
+export const setCurrentUser = user => ({
+  type: SET_CURRENT_USER,
+  payload: user
+});

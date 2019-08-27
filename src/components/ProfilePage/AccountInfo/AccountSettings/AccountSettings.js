@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './index.module.scss';
+import classNames from "classnames";
 
 import Text from '@common/Text';
 import Icon from '@common/Icon';

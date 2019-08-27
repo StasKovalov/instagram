@@ -1,42 +1,62 @@
-import React from 'react';
+import React, { Component } from 'react';
 import style from './index.module.scss';
+
+import { NavLink } from "react-router-dom";
 
 import Icon from '@common/Icon';
 
-const LINKS = ['ПУБЛИКАЦИИ', 'IGTV', 'СОХРАНЕНО', 'ОТМЕТКИ'];
+class PublicationSections extends Component {
 
-const PublicationSections = () => {
-    return (
-        <ul className={style.accountPublication}>
-            <li className={style.liContainer}>
-                <Icon>
-                    <button className={style.myPhotos} />
-                </Icon>
-                <span className={style.sectionName}>ПУБЛИКАЦИИ</span>
-            </li>
+    render() {
+        const { username, authUser } = this.props;
+        return (
+            <ul className={style.accountPublication}>
+                <NavLink exact activeClassName={style.active} to={{
+                    pathname: `/user/${username}`,
+                    state: { username: username }
+                }}
+                    className={style.link}>
+                    <Icon>
+                        <span className={style.myPhotos} />
+                    </Icon>
+                    <span className={style.sectionName}>ПУБЛИКАЦИИ</span>
+                </NavLink>
 
-            <li className={style.liContainer}>
-                <Icon>
-                    <button className={style.igtv} />
-                </Icon>
-                <span className={style.sectionName}>IGTV</span>
-            </li>
+                <NavLink exact activeClassName={style.active} to={{
+                    pathname: `/user/${username}/igtv`,
+                    state: { username: username }
+                }}
+                    className={style.link}>
+                    <Icon>
+                        <span className={style.igtv} />
+                    </Icon>
+                    <span className={style.sectionName}>IGTV</span>
+                </NavLink>
 
-            <li className={style.liContainer}>
-                <Icon>
-                    <button className={style.savedPublications} />
-                </Icon>
-                <span className={style.sectionName}>СОХРАНЕНО</span>
-            </li>
+               { username === authUser ? (<NavLink exact activeClassName={style.active} to={{
+                    pathname: `/user/${username}/saved`,
+                    state: { username: username }
+                }}
+                    className={style.link}>
+                    <Icon>
+                        <span className={style.savedPublications} />
+                    </Icon>
+                    <span className={style.sectionName}>СОХРАНЕНО</span>
+                </NavLink>) : null}
 
-            <li className={style.liContainer}>
-                <Icon>
-                    <button className={style.marks} />
-                </Icon>
-                <span className={style.sectionName}>ОТМЕТКИ</span>
-            </li>
-        </ul>
-    )
+                <NavLink exact activeClassName={style.active} to={{
+                    pathname: `/user/${username}/tagged`,
+                    state: { username: username }
+                }}
+                    className={style.link}>
+                    <Icon>
+                        <span className={style.tagged} />
+                    </Icon>
+                    <span className={style.sectionName}>ОТМЕТКИ</span>
+                </NavLink>
+            </ul>
+        )
+    }
 }
 
 export default PublicationSections;
