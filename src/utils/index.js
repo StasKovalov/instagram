@@ -1,4 +1,3 @@
-import { Route } from "react-router-dom";
 import uid from "uid";
 
 export const checkValidity = (value) => {
