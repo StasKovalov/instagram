@@ -16,4 +16,3 @@ export const shuffle = (max, arr) => {
       randArray[i] = temp;
    }
 }
-
