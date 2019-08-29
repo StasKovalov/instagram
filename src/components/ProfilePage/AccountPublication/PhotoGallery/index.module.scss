@@ -1,126 +1,131 @@
-@import '../../../../scss/variables.scss';
+@import "../../../../scss/variables.scss";
 
 .accountPhotos {
-    display: flex;
-    flex-wrap: wrap;
-    .img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .wrapperPhoto {
-    height: 100%;
-    width: 100%;
+  height: 40vh;
+  width: 100%;
 }
 
 .countsInfo {
-    display: none;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .countsInfoWithoutTop {
-    z-index: 5;
-    display: none;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.6);
-    top: 0;
+  z-index: 5;
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
 }
 
-.wrapperPhoto:hover .countsInfo{
-    display: block;
-    cursor: pointer;
+.wrapperPhoto:hover .countsInfo {
+  display: block;
+  cursor: pointer;
 }
 
 .wrapperPhoto:hover .countsInfoWithoutTop {
-    display: block;
-    cursor: pointer;
+  display: block;
+  cursor: pointer;
 }
-    
-     @media screen and (min-width:$screen-md) {
-    .countsInfo {
-        top: 14px;
-        bottom: 14px;
-        left: 14px;
-        right: 14px;
-        }
-        .countsInfoWithoutTop {
-            bottom: 14px;
-            left: 14px;
-            right: 14px;
-        }
-    }
 
-    @media screen and (max-width:$screen-sm-max) {
-    .countsInfo {
-        top: 3px;
-        bottom: 3px;
-        left: 3px;
-        right: 3px;
-        }
+@media screen and (min-width: $screen-md) {
+  .countsInfo {
+    top: 14px;
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+  }
+  .countsInfoWithoutTop {
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+  }
+}
 
-        .countsInfoWithoutTop {
-        bottom: 3px;
-        left: 3px;
-        right: 3px;
-        }
-    }
-
-
-  .likeHeartIcon,
-  .commentIcon {
-      display: block;
-      background: url("../../../../assets/icons-image-size-s.png");
-      background-repeat: no-repeat;
-      height: 19px;
-      width: 19px;
+@media screen and (max-width: $screen-sm-max) {
+  .countsInfo {
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
   }
 
- .likeHeartIcon {
-    background-position: -320px -266px;
- }     
+  .countsInfoWithoutTop {
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+  }
 
-.commentIcon{
-    background-position: -320px -224px;
-} 
+  .wrapperPhoto {
+    height: 30vh;
+    width: 100%;
+  }
+}
 
- .counts {
-     font-family: "Montserrat", sans-serif;
-     font-size: 14px;
-     position: relative;
-     display: flex;
-     justify-content: center;
-     top: 50%;
-     color: white;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     z-index: 50;
- }
+.likeHeartIcon,
+.commentIcon {
+  display: block;
+  background: url("../../../../assets/icons-image-size-s.png");
+  background-repeat: no-repeat;
+  height: 19px;
+  width: 19px;
+}
 
- .likeCounts, .commentCounts {
-    font-weight: bold;
-    display: flex;
+.likeHeartIcon {
+  background-position: -320px -266px;
+}
+
+.commentIcon {
+  background-position: -320px -224px;
+}
+
+.counts {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  color: white;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
+
+.likeCounts,
+.commentCounts {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  margin-left: 5px;
+}
+
+@media screen and (min-width: $screen-sm) {
+  .likeCounts {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+  .counts {
+    flex-direction: column;
     align-items: center;
- }
-
- .text {
-        margin-left: 5px;
-        }
-
-   @media screen and (min-width:$screen-sm) {
-        .likeCounts {
-            margin-right: 20px;
-        }
-    }
-
-    @media screen and (max-width:$screen-xs-max) {
-        .counts {
-            flex-direction: column;
-            align-items: center;
-        }
-        .likeCounts {
-            margin-bottom: 5px;
-        }
-    }
+  }
+  .likeCounts {
+    margin-bottom: 5px;
+  }
+}
