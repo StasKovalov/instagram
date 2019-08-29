@@ -8,11 +8,15 @@
 
     .installImg {
         display: flex;
+        max-width: 350px;
+        width: 100%;
         justify-content: space-between;
         margin-top: 20px;
 
         img {
+            display: block;
             width: 48%;
+            flex-shrink: 1;
             cursor: pointer;
         }
     }

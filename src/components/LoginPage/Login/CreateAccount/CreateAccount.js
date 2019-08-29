@@ -5,7 +5,7 @@ const CreateAccount = () => {
   return (
     <div className={style.createAccount}>
       <span>У вас еще нет аккаунта?</span>
-      <span>Зарегистрироваться</span>
+      <span className={style.register}>Зарегистрироваться</span>
     </div>
   );
 };

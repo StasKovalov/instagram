@@ -1,16 +1,13 @@
-@import '@scss/variables.scss';
+@import "@scss/variables.scss";
 
 .profilePhoto {
-    position: relative;
-    width: 33.33%;
-    &:nth-child(-n+3) {
-        padding-top: 0px;
-    }
-     @media screen and (min-width:$screen-md) {
-         padding: 14px;
-    }
+  position: relative;
+  width: 33.33%;
+  @media screen and (min-width: $screen-md) {
+    padding: 14px;
+  }
 
-    @media screen and (max-width:$screen-sm-max) {
-         padding: 3px;
-    }
+  @media screen and (max-width: $screen-sm-max) {
+    padding: 3px;
+  }
 }
