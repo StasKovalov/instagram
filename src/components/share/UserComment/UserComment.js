@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./index.module.scss";
 
-const UserComment = ({userComment}) => {
+const UserComment = ({userComment = {}}) => {
     const { username, comment } = userComment;
     return (
         <div className={style.userComment}>

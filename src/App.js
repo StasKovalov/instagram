@@ -5,7 +5,7 @@ import store from "@redux/store";
 import { setCurrentUser } from "@redux/actionCreators";
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import Layout from "@components/Layout";
+import Layout from "@containers/Layout";
 import ProfilePage from "@containers/ProfilePage";
 import Main from "@containers/Main";
 import LoginPage from "@containers/LoginPage";
