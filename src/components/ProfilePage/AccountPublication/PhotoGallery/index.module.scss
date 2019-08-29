@@ -7,66 +7,38 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: .5s;
   }
 }
 
 .wrapperPhoto {
   height: 40vh;
   width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .countsInfo {
-  display: none;
+  opacity: 0;
   position: absolute;
   background: rgba(0, 0, 0, 0.6);
-}
-
-.countsInfoWithoutTop {
-  z-index: 5;
-  display: none;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
   top: 0;
+  left: 0;
+  transition: .5s;
 }
 
 .wrapperPhoto:hover .countsInfo {
-  display: block;
+  opacity: 1;
   cursor: pointer;
 }
 
-.wrapperPhoto:hover .countsInfoWithoutTop {
-  display: block;
-  cursor: pointer;
-}
-
-@media screen and (min-width: $screen-md) {
-  .countsInfo {
-    top: 14px;
-    bottom: 14px;
-    left: 14px;
-    right: 14px;
-  }
-  .countsInfoWithoutTop {
-    bottom: 14px;
-    left: 14px;
-    right: 14px;
-  }
+.wrapperPhoto:hover .img {
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: $screen-sm-max) {
-  .countsInfo {
-    top: 3px;
-    bottom: 3px;
-    left: 3px;
-    right: 3px;
-  }
-
-  .countsInfoWithoutTop {
-    bottom: 3px;
-    left: 3px;
-    right: 3px;
-  }
-
   .wrapperPhoto {
     height: 30vh;
     width: 100%;
