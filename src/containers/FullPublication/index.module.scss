@@ -2,6 +2,7 @@
     max-width: 800px;
     width: 100%;
     display: flex;
+    margin-bottom: 40px;
 }
 
 .img {
@@ -37,7 +38,7 @@
 
   .icon {
     display: block;
-    background: url("../../../assets/icons-image-size-m.png");
+    background: url("../../assets/icons-image-size-m.png");
     background-repeat: no-repeat;
     background-position: -340px -156px;
     height: 24px;
