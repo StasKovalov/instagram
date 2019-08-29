@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Card, { CardSkeleton } from "./Card";
+import Card from "./Card";
 import style from "./index.module.scss";
 
 

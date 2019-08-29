@@ -6,7 +6,6 @@ import loginPhoneImage from "@assets/iphone-img.png";
 
 class LoginPage extends Component {
   render() {
-    console.log(this.props.isAuth);
     return (
       <section className={style.container}>
         <main className={style.main}>

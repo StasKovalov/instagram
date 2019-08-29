@@ -12,7 +12,7 @@ const InstagramImg = ({loginPage, profilePage}) => {
     
     return (
         <div className={instagramTitleWrap}>
-            <img className={style.instagramImg} src={Instagram} />
+            <img alt="Instagram Logo" className={style.instagramImg} src={Instagram} />
         </div>
     )
 }

@@ -9,8 +9,8 @@ import { likeCurrentUser, unlikeCurrentUser } from '@redux/actionCreators';
 import Avatar from "@common/Avatar";
 import Icon from "@common/Icon";
 import Photo from "@common/Photo";
-import UserActions from "./UserActions";
-import UserComment from "./UserComment";
+import UserActions from "@share/UserActions";
+import UserComment from "@share/UserComment";
 
 class Card extends Component {
 
@@ -96,7 +96,7 @@ class Card extends Component {
           <div className={style.userRate}>
             <span className={style.rate}>{likes} отметок "Нравится"</span>
           </div>
-          {comments && comments.map(comment => <UserComment userComment={comment} />)}
+          {comments && comments.map((comment, indx) => <UserComment key={indx} userComment={comment} />)}
         </div>
       </div>
     );

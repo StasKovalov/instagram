@@ -22,7 +22,6 @@ class ProfilePage extends Component  {
     }
 
     updatePerson = () => {
-        console.log(this.props.location.state);
         const {username} = this.props.location.state;
         const {authUser, users} = this.props;
         let user = null;
