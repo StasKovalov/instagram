@@ -9,6 +9,7 @@ import { likeCurrentUser, unlikeCurrentUser } from '@redux/actionCreators';
 import Avatar from "@common/Avatar";
 import Icon from "@common/Icon";
 import Photo from "@common/Photo";
+import AddComment from "@share/AddComment";
 import UserActions from "@share/UserActions";
 import UserComment from "@share/UserComment";
 
@@ -59,7 +60,7 @@ class Card extends Component {
   }
 
   render() {
-    const { profile_picture, username, image, likes, comments } = this.props;
+    const { profile_picture, username, image, likes, comments, imageId } = this.props;
     const { clickLiked, doubleClickLiked } = this.state;
     const animationHeartStyle = classNames(style.animationHeart, {
       [style.liked]: doubleClickLiked
@@ -96,21 +97,19 @@ class Card extends Component {
           <div className={style.userRate}>
             <span className={style.rate}>{likes} отметок "Нравится"</span>
           </div>
-          {comments && comments.map((comment, indx) => <UserComment key={indx} userComment={comment} />)}
+          <div className={style.comments}>
+            {comments && comments.map((comment, indx) => <UserComment key={indx} userComment={comment} />)}
+          </div>
+          <AddComment username={username} imageId={imageId}/>
         </div>
       </div>
     );
   }
 }
 
-const mapStateToProps = ({ currentUser }) => ({
-  likedUsers: currentUser.likedUsers,
-})
-
-
 const mapDispatchToProps = {
   likeCurrentUser,
   unlikeCurrentUser
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Card);
+export default connect(null, mapDispatchToProps)(Card);
