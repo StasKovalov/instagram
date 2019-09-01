@@ -1,4 +1,4 @@
-import { SET_CURRENT_USER, LIKE_CURRENT_USER, UNLIKE_CURRENT_USER } from "./constants";
+import { SET_CURRENT_USER, LIKE_CURRENT_USER, UNLIKE_CURRENT_USER, ADD_COMMENT } from "./constants";
 
 const initialState = {
   isAuth: false,
@@ -27386,7 +27386,7 @@ const initialState = {
   ],
 }
 
-const updateLikes = (publication, quantity, isLiked) => {
+const updateLikesCount = (publication, quantity, isLiked) => {
   const { counts: { comments, likes } } = publication;
   return {
     ...publication,
@@ -27398,7 +27398,7 @@ const updateLikes = (publication, quantity, isLiked) => {
   }
 }
 
-const updatePublication = (state, payload, quantity, isLiked) => {
+const updatePublicationLikes = (state, payload, quantity, isLiked) => {
   const { users } = state;
   const { username, photoId } = payload;
   const user = users.find(user => user.username === username);
@@ -27406,7 +27406,7 @@ const updatePublication = (state, payload, quantity, isLiked) => {
   const publicationIndex = user.publications.findIndex(publication => publication.id === photoId);
   const publication = user.publications[publicationIndex];
 
-  const updPublication = updateLikes(publication, quantity, isLiked)
+  const updPublication = updateLikesCount(publication, quantity, isLiked)
 
   user.publications[publicationIndex] = updPublication;
 
@@ -27420,6 +27420,48 @@ const updatePublication = (state, payload, quantity, isLiked) => {
   }
 }
 
+const updateCommentsCount = (publication) => {
+  const { counts: { comments, likes } } = publication;
+  return  {
+      comments: comments + 1,
+      likes
+    }
+}
+
+const updatePublicationComments = (state, payload)  => {
+  const {users} = state;
+  const { username, photoId, comment } = payload;
+  const user = users.find(user => user.username === username);
+  const userIndex = users.findIndex(user => user.username === username);
+  const publicationIndex = user.publications.findIndex(publication => publication.id === photoId);
+  const publication = user.publications[publicationIndex];
+  const { comments } = publication;
+
+  const updCounts = updateCommentsCount(publication);
+  const newComment = {
+    username: state.authUser,
+    comment
+  }
+  const updComments = [...comments, newComment];
+  const updPublication = {
+    ...publication,
+    comments: updComments,
+    counts: updCounts
+  }
+
+  user.publications[publicationIndex] = updPublication;
+
+  return {
+    ...state,
+    users: [
+      ...users.slice(0, userIndex),
+      user,
+      ...users.slice(userIndex + 1)
+    ]
+  }
+}
+
+
 const reducers = (state = initialState, { type, payload }) => {
   switch (type) {
     case SET_CURRENT_USER:
@@ -27430,10 +27472,15 @@ const reducers = (state = initialState, { type, payload }) => {
       };
 
     case LIKE_CURRENT_USER:
-      return updatePublication(state, payload, 1, true)
+      return updatePublicationLikes(state, payload, 1, true)
 
     case UNLIKE_CURRENT_USER:
-      return updatePublication(state, payload, -1, false)
+      return updatePublicationLikes(state, payload, -1, false)
+
+    case ADD_COMMENT:
+      return updatePublicationComments(state, payload)
+
+
 
     default:
       return state;

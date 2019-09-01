@@ -9,6 +9,7 @@ import { likeCurrentUser, unlikeCurrentUser } from '@redux/actionCreators';
 import Avatar from "@common/Avatar";
 import Icon from "@common/Icon";
 import Photo from "@common/Photo";
+import AddComment from "@share/AddComment";
 import UserActions from "@share/UserActions";
 import UserComment from "@share/UserComment";
 
@@ -62,7 +63,7 @@ class Card extends Component {
     const {
       username,
       profile_picture,
-      publication: { comments, counts: { likes }, photoURL },
+      publication: {id, comments, counts: { likes }, photoURL },
       fullPublication,
       onHideModal
     } = this.props;
@@ -98,19 +99,21 @@ class Card extends Component {
         </div>
 
         <div className={style.other}>
-          <UserActions clickLike={this.clickLike} isLiked={clickLiked} />
+          <div className={style.actions}>
+            <UserActions clickLike={this.clickLike} isLiked={clickLiked} />
+          </div>
           <div className={style.userRate}>
             <span className={style.rate}>{likes} отметок "Нравится"</span>
           </div>
           <div className={style.comments}>
             {comments && comments.map((comment, indx) => <UserComment onHideModal={onHideModal} key={indx} userComment={comment} />)}
           </div>
+          <AddComment username={username} imageId={id}/>
         </div>
       </div>
     );
   }
 }
-
 
 const mapDispatchToProps = {
   likeCurrentUser,

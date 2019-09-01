@@ -9,9 +9,26 @@
   .other {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     padding: 8px 16px;
     background: #fff;
+=======
+>>>>>>> add-comment
   }
+}
+
+.actions,
+.userRate,
+.comments {
+ padding: 0px 16px;
+}
+
+.comments {
+  padding-bottom: 10px;
+}
+
+.actions {
+  padding-top: 8px;
 }
 
 .userTitle {
