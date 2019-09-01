@@ -8,6 +8,7 @@ import classNames from "classnames";
 
 import UserComment from "@share/UserComment";
 import UserActions from "@share/UserActions";
+import AddComment from "@share/AddComment"
 import Photo from "@common/Photo";
 import Icon from "@common/Icon";
 import Avatar from "@common/Avatar";
@@ -62,7 +63,7 @@ class FullPublication extends Component {
     const {
       username,
       profile_picture,
-      publication: { comments, counts: { likes }, photoURL },
+      publication: {id, comments, counts: { likes }, photoURL },
       onHideModal
     } = this.props;
 
@@ -116,6 +117,7 @@ class FullPublication extends Component {
             <div className={style.userRate}>
               <span className={style.rate}>{likes} отметок "Нравится"</span>
             </div>
+            <AddComment username={username} imageId={id} />
           </div>
         </div>
       </div>

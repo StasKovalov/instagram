@@ -13,8 +13,12 @@
 .publicationInfo {
     display: flex;
     flex-direction: column;
-    width: 40%;
     background:#ffffff;
+}
+
+
+.photoWrapper {
+  position: relative;
 }
 
 .userTitle {
@@ -55,7 +59,7 @@
 
 .userRate {
   font-family: "Montserrat", sans-serif;
-  padding: 0px 20px;
+  padding: 10px 20px;
   .rate {
     font-size: 12px;
     color: #262626;
@@ -74,12 +78,6 @@
     &:active {
        opacity: 0.7;
     }
-}
-
-
-.photoWrapper {
-  position: relative;
-   width: 60%;
 }
 
 .heartWrapper {
@@ -128,3 +126,26 @@
     transform: scale(1);
 }
 }
+
+@media screen and (min-width: 800px) {
+.publicationInfo {
+    width: 40%;
+}
+
+
+.photoWrapper {
+   width: 60%;
+}
+}
+
+@media screen and (max-width: 799px) {
+.publicationInfo {
+    width: 50%;
+}
+
+
+.photoWrapper {
+   width: 50%;
+}
+}
+
