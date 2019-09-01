@@ -4,6 +4,7 @@ import style from "./index.module.scss";
 import Modal from "@components/Modal";
 import FullPublication from "./FullPublication";
 import Card from "@components/Main/List/Card";
+import { ClipLoader } from "react-spinners";
 
 import Photo from "@common/Photo";
 import Icon from "@common/Icon";
@@ -14,23 +15,26 @@ class PhotoGallery extends Component {
   state = {
     modalContent: null,
     isVisibleModal: false,
-    tablet: false
+    loading: false
   };
 
   onPressPublication = e => {
+    this.setState({ loading: true, isVisibleModal: true,})
     document.body.style.overflow = "hidden";
     const { profile_picture, username } = this.props;
     const publication = this.props.publications.find(
       publication => publication.id === e.currentTarget.dataset.id
     );
-    this.setState({
-      modalContent: {
-        username,
-        profile_picture,
-        publication
-      },
-      isVisibleModal: true
-    });
+    setTimeout(() => {
+      this.setState({
+        modalContent: {
+          username,
+          profile_picture,
+          publication
+        },
+        loading: false
+      });
+    }, 650)
   };
   onHideModal = () => {
     document.body.style.overflow = "";
@@ -41,12 +45,14 @@ class PhotoGallery extends Component {
   };
   render() {
     const { publications } = this.props;
+    const {loading} = this.state;
     return (
       <div className={style.accountPhotos}>
         {this.state.isVisibleModal && (
           <Modal  
             onHideModal={this.onHideModal}>
-            {tablet ? <Card 
+            {loading ? <div className={style.spinner}><ClipLoader color={"rgba(255, 255, 255, 0.5)"} size={60} /></div> : 
+            tablet ? <Card 
             onHideModal={this.onHideModal} 
             fullPublication {...this.state.modalContent}/> 
             : 
