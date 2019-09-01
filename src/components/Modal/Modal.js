@@ -9,10 +9,10 @@ class Modal extends Component {
     }
 
     render() {
-        const {closeBackdrop, show, children} = this.props;
+        const { onHideModal, children} = this.props;
         return (
             <Fragment>
-                <Backdrop closeBackdrop={closeBackdrop} show={show} />
+                <Backdrop closeBackdrop={onHideModal}/>
                 <div className={style.modal}>
                     {children}
                 </div>

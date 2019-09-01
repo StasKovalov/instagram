@@ -15,7 +15,7 @@ class ProfilePage extends Component {
     this.updatePerson();
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     if (
       prevProps.location.state.username !== this.props.location.state.username
     ) {
@@ -48,7 +48,8 @@ class ProfilePage extends Component {
   };
 
   render() {
-    let { user } = this.state;
+    const { user } = this.state;
+    console.log(user, "Update");
     const { authUser } = this.props;
     return (
       <div className={style.inner}>

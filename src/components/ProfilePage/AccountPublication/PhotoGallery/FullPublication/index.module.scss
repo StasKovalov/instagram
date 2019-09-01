@@ -1,23 +1,27 @@
-.card {
-  border: 1px solid var(--gray);
-  box-shadow: 0px 0px 5px 1px var(--gray);
-  border-bottom: 1px solid #efefef;
-  background: #fff;
-  border-radius: 4px;
-      height: 100%;
+.wrapperPublication {
+    width: 100%;
+    display: flex;
+    height: 80vh;
+}
 
-  .other {
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.publicationInfo {
     display: flex;
     flex-direction: column;
-    padding: 8px 16px;
-    background: #fff;
-  }
+    width: 40%;
+    background:#ffffff;
 }
 
 .userTitle {
   display: flex;
   justify-content: space-between;
-  padding: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #efefef;
 
   .user {
     display: flex;
@@ -32,7 +36,7 @@
 
   .icon {
     display: block;
-    background: url('../../../../assets/icons-image-size-m.png');
+    background: url("../../../../../assets/icons-image-size-m.png");
     background-repeat: no-repeat;
     background-position: -340px -156px;
     height: 24px;
@@ -40,36 +44,42 @@
   }
 }
 
+.comments {
+    flex-grow: 1;
+    padding: 0px 20px;
+}
+
+.userActions, .comments {
+  padding: 10px 20px;
+}
+
 .userRate {
   font-family: "Montserrat", sans-serif;
-  margin: 10px 0px;
+  padding: 0px 20px;
   .rate {
-    font-size: 14px;
+    font-size: 12px;
     color: #262626;
     font-weight: 600;
   }
 }
 
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.description {
-  text-transform: capitalize;
-}
-
-.title {
-  margin: 15px 0;
-}
-
 .link {
-  text-decoration: none;
+    text-decoration: none;
+    outline: none;
+    &:active,  &:visited ,  &:focus  {
+        text-decoration: none;
+        outline: none;
+        border: 0;
+    }
+    &:active {
+       opacity: 0.7;
+    }
 }
+
 
 .photoWrapper {
   position: relative;
+   width: 60%;
 }
 
 .heartWrapper {
@@ -81,7 +91,7 @@
 
 .animationHeart {
     display: none;
-    background: url('../../../../assets/icons-image-size-s.png');
+    background: url('../../../../../assets/icons-image-size-s.png');
     background-repeat: no-repeat;
     background-position: 0 -98px;
     height: 81px;

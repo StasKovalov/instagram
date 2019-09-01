@@ -40,7 +40,7 @@
 
 @media screen and (max-width: $screen-sm-max) {
   .wrapperPhoto {
-    height: 30vh;
+    height: 25vh;
     width: 100%;
   }
 }
@@ -101,3 +101,15 @@
     margin-bottom: 5px;
   }
 }
+
+  @media screen and (min-width: $screen-md) {
+    .accountPhotos {
+      margin-top: -14px;
+    }
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    .accountPhotos {
+      margin-top: 3px;
+    }
+  }
