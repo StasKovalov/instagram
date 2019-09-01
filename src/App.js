@@ -7,7 +7,6 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 import Layout, { AutoScrollWrapper } from "@containers/Layout";
 import ProfilePage from "@containers/ProfilePage";
-import FullPost from "@containers/FullPublication";
 import Main from "@containers/Main";
 import LoginPage from "@containers/LoginPage";
 import PrivateRoute from "@components/PrivateRoute";
@@ -26,7 +25,6 @@ const App = () => (
         <Route path="/login" exact component={LoginPage} />
         <PrivateRoute path="/main" exact component={Main} />
         <PrivateRoute path="/user/:username" component={ProfilePage} />
-        <PrivateRoute path="/p/:id" component={FullPost} />
       </Switch>
     </Layout>
   </AutoScrollWrapper>

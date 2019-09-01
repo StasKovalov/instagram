@@ -24,29 +24,29 @@ class Card extends Component {
   }
 
   updateLikeState = () => {
-    const { isLiked } = this.props;
+    const { publication: { isLiked } } = this.props;
     this.setState({ clickLiked: isLiked });
   }
 
   clickLike = () => {
-    const { username, imageId, likeCurrentUser, unlikeCurrentUser } = this.props;
+    const { username, publication: { id }, likeCurrentUser, unlikeCurrentUser } = this.props;
     if (!this.state.clickLiked) {
       this.setState({ clickLiked: true })
-      likeCurrentUser(username, imageId);
+      likeCurrentUser(username, id);
     } else {
       this.setState({ clickLiked: false})
-      unlikeCurrentUser(username, imageId);
+      unlikeCurrentUser(username, id);
     }
   }
 
   doubleClickLike = () => {
-    const { username, imageId, likeCurrentUser } = this.props;
+    const { username, publication: { id }, likeCurrentUser } = this.props;
     if (!this.state.clickLiked) {
       this.setState({
         doubleClickLiked: true,
         clickLiked: true,
       })
-      likeCurrentUser(username, imageId);
+      likeCurrentUser(username, id);
       setTimeout(() => {
         this.setState({ doubleClickLiked: false })
       }, 1000);
@@ -59,7 +59,13 @@ class Card extends Component {
   }
 
   render() {
-    const { profile_picture, username, image, likes, comments } = this.props;
+    const {
+      username,
+      profile_picture,
+      publication: { comments, counts: { likes }, photoURL },
+      fullPublication,
+      onHideModal
+    } = this.props;
     const { clickLiked, doubleClickLiked } = this.state;
     const animationHeartStyle = classNames(style.animationHeart, {
       [style.liked]: doubleClickLiked
@@ -82,12 +88,12 @@ class Card extends Component {
         </div>
 
         <div onDoubleClick={this.doubleClickLike} className={style.photoWrapper}>
-          <Photo>
+          <Photo fullPublication={fullPublication}>
             <div className={style.heartWrapper}>
               <Icon><span className={animationHeartStyle}></span></Icon>
             </div>
 
-            <img className={style.image} src={image} alt="error" />
+            <img className={style.image} src={photoURL} alt="error" />
           </Photo>
         </div>
 
@@ -96,16 +102,14 @@ class Card extends Component {
           <div className={style.userRate}>
             <span className={style.rate}>{likes} отметок "Нравится"</span>
           </div>
-          {comments && comments.map((comment, indx) => <UserComment key={indx} userComment={comment} />)}
+          <div className={style.comments}>
+            {comments && comments.map((comment, indx) => <UserComment onHideModal={onHideModal} key={indx} userComment={comment} />)}
+          </div>
         </div>
       </div>
     );
   }
 }
-
-const mapStateToProps = ({ currentUser }) => ({
-  likedUsers: currentUser.likedUsers,
-})
 
 
 const mapDispatchToProps = {
@@ -113,4 +117,4 @@ const mapDispatchToProps = {
   unlikeCurrentUser
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Card);
+export default connect(null, mapDispatchToProps)(Card);

@@ -1,7 +1,5 @@
 .modal {
-    max-width: 800px;
-    width: 100%;
-    display: flex;
+    width: 75%;
     position: fixed;
     z-index: 500;
     left: 50%;
@@ -9,4 +7,13 @@
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     transition: all 0.3s ease-out;
+}
+
+@media screen and (max-width: 700px) {
+    .modal {
+        width: 100%;
+        scrollbar-width: none;
+        height: calc(100% - 60px);
+        overflow-y: scroll;
+    }
 }
