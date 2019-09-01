@@ -93,7 +93,9 @@ class Card extends Component {
         </div>
 
         <div className={style.other}>
-          <UserActions clickLike={this.clickLike} isLiked={clickLiked} />
+          <div className={style.actions}>
+            <UserActions clickLike={this.clickLike} isLiked={clickLiked} />
+          </div>
           <div className={style.userRate}>
             <span className={style.rate}>{likes} отметок "Нравится"</span>
           </div>

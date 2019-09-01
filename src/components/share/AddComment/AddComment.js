@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import style from "./index.module.scss";
 
+import { checkValidity } from "@utils";
 import {connect} from "react-redux";
 import { addComment } from "@redux/actionCreators";
  
@@ -14,21 +15,24 @@ class AddComment extends Component {
     addCommentClick = () => {
         const { username, imageId, addComment} = this.props;
         addComment(username, imageId, this.state.value);
-        this.setState({value: ""})
+        this.setState({value: "", isValid: false})
     }
 
     commentOnChange = (e) => {
-        this.setState({ value: e.target.value });
+        const isValid = checkValidity(e.target.value)
+        this.setState({ value: e.target.value, isValid });
     }
 
     render() {
+        const {isValid} = this.state;
         return (
             <div className={style.addComment}>
                 <textarea
+                    placeholder="Добавить комментарий..."
                     onChange={this.commentOnChange}
                     value={this.state.value}
                     className={style.commentArea} />
-                <button onClick={this.addCommentClick}>Добавить комментарий</button>
+                <button disabled={!isValid} className={style.buttonAdd} onClick={this.addCommentClick}>Опубликовать</button>
             </div>
         )
     }
