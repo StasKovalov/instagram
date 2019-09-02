@@ -24,7 +24,7 @@ class AddComment extends Component {
     }
 
     addCommentEnterPress = (e) => {
-        if(e.key === "Enter") {
+        if (e.key === "Enter" && checkValidity(e.target.value) ) {
             this.setState({ loading: true });
             const { username, imageId, addComment } = this.props;
             setTimeout(() => {
@@ -43,7 +43,8 @@ class AddComment extends Component {
         const {isValid, loading} = this.state;
         return (
             <div className={style.addComment}>
-                <textarea
+                <input
+                    type="text"
                     onKeyPress={this.addCommentEnterPress}
                     placeholder="Добавить комментарий..."
                     onChange={this.commentOnChange}

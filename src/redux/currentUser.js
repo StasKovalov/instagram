@@ -7,7 +7,7 @@ const initialState = {
     {
       "id": "1-sijswdk",
       "username": "irrena.vldmrrv",
-      "full_name": "𝙸.𝚁𝚁𝙴𝙽𝙰 𝚅𝙻𝙰𝙳𝙸𝙼𝙸𝚁𝚁𝙾𝚅𝙰♡",
+      "full_name": "Irena Vladimirovna",
       "bio": "Дойдя до конца, люди смеются над страхами, мучившими их вначале",
       "profile_picture": "https://picua.org/images/2019/08/13/f760b976931fa118661306248bebeaaf.jpg",
       "counts": {
@@ -2963,7 +2963,7 @@ const initialState = {
       "id": "4-2c2ixje",
       "profile_picture": "https://picua.org/images/2019/08/13/09d8da4c23ddb98b885591090cc4a4c6.jpg",
       "username": "alina_malechko",
-      "full_name": "Просто Аля👑",
+      "full_name": "Просто Аля",
       "bio": "Успех — это способность терпеть неудачу снова и снова без потери энтузиазма.",
       "counts": {
         "media": 73,
@@ -18829,7 +18829,7 @@ const initialState = {
       "id": "21-114430k",
       "profile_picture": "https://picua.org/images/2019/08/13/204c3b2e4e17e927c0d1fdc12efc98d8.jpg",
       "username": "_zheka_polikarpov_",
-      "full_name": "𝒵𝒽𝑒𝓀𝒶 𝒫𝑜𝓁𝒾𝓀𝒶𝓇𝓅𝑜𝓋",
+      "full_name": "Zheka Polikaprov",
       "bio": "Опытом люди называют свои ошибки.",
       "counts": {
         "media": 2,
@@ -20550,7 +20550,7 @@ const initialState = {
       "id": "31-5jsvxfp",
       "profile_picture": "https://picua.org/images/2019/08/13/98de03a091c29507556028aa6d55c737.jpg",
       "username": "tr.al.v",
-      "full_name": "▪Аля Терещенко▪",
+      "full_name": "Аля Терещенко",
       "bio": "Я никогда не обижаюсь, я просто меняю мнение о человеке...",
       "counts": {
         "media": 4,
@@ -21918,7 +21918,7 @@ const initialState = {
       "id": "38-4k4ppm1",
       "profile_picture": "https://picua.org/images/2019/08/13/ceb16533eb9757bd05cecb3d42082ced.jpg",
       "username": "fidalgodev",
-      "full_name": "Fidalgo | Frontend Developer",
+      "full_name": "Frontend Developer",
       "bio": "О нас думают плохо лишь те, кто хуже нас, а те кто лучше нас... им просто не до нас...",
       "counts": {
         "media": 39,

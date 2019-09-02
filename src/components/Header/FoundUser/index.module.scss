@@ -1,0 +1,33 @@
+.foundUser {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px #efefef;
+    padding: 8px 14px;
+    &:hover {
+        background: #fafafa;
+        cursor: pointer;
+    }
+}
+
+.username {
+    color: #262626;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+ .fullName {
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 5px;
+    color: #999;
+    font-weight: 500;
+}
+
+.dataInfo {
+    margin-left: 7px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
