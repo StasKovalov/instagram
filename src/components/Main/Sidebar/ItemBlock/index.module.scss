@@ -5,6 +5,8 @@
     border: 1px solid #e6e6e6;
     padding: 15px 20px;
     margin-top: 20px;
+    max-height: 200px;
+    overflow-y: scroll;
     border-radius: 4px;
     width: 100%;
 
@@ -27,5 +29,20 @@
             color: #262626;
             font-size: 12px;
         }
+    }
+}
+
+.link {
+    color: #262626;
+    display: block;
+    text-decoration: none;
+    outline: none;
+    &:active,  &:visited ,  &:focus  {
+        text-decoration: none;
+        outline: none;
+        border: 0;
+    }
+    &:active {
+       opacity: 0.7;
     }
 }

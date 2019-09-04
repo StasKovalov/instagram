@@ -46,8 +46,23 @@
 }
 
 .text {
+        display: flex;
+        align-items: center;
+ 
       @media screen and (max-width:420px) {
-        text-align: center;
-       margin-top: 15px;
+          justify-content: center;
+            margin-top: 15px;
     }
+}
+
+.adminIcon {
+    display: block;
+    background: url("../../../../assets/icons-image-size-s.png");
+    background-position: -383px -238px;
+    height: 18px;
+    width: 18px;
+}
+
+.admin {
+    margin-left: 10px;
 }

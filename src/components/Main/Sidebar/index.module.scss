@@ -7,9 +7,8 @@
     flex-direction: column;
     width: 280px;
     transition: all 0.2s ease-in-out;
-    height: 0;
 
-     @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1024px) {
        display: none;
     }
 }

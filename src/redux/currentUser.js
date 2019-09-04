@@ -5,6 +5,34 @@ const initialState = {
   authUser: null,
   users: [
     {
+      "id": "admin",
+      "username": "staskovalov",
+      "full_name": "Stas Kovalov",
+      "bio": "Front-end developer | Creator",
+      "profile_picture": "https://picua.org/images/2019/09/03/03317da0bbb3133f7a6f347e5fbe7c34.jpg",
+      "counts": {
+        "media": 1,
+        "follows": 800,
+        "followed_by": 0
+      },
+      "publications": [{
+        "id": "vaqyfox",
+        "photoURL": "https://picua.org/images/2019/09/03/79bb6c44e43578b3de3ae36266cff7ae.jpg",
+        "comments": [
+          {
+            "username": "staskovalov",
+            "comment": 'Привет, видимо вы просматриваете мое резюме, что ж давайте немного ближе познакомимся. Меня зовут Стас, мне 19 лет, я студент третьего курса НАУ и я создатель этой небольшой копии Instagram. Здесь реализован базовый функционал: авторизация, лайки, коментарии, просмотр профилей других юзеров, а так же их поиcк по username. Так как проект еще в разработке, функционал будет еще добавляться. Сделал я его, что б проверить и неким образом улучшить свои скиллы'
+          }
+        ],
+        "counts": {
+          "likes": 800,
+          "comments": 1
+        },
+        "isLiked": false
+      }],
+        "isAdmin": true,
+      },
+    {
       "id": "1-sijswdk",
       "username": "irrena.vldmrrv",
       "full_name": "Irena Vladimirovna",
