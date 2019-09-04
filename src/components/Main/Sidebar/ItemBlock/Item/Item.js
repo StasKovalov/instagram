@@ -3,15 +3,15 @@ import style from "./index.module.scss";
 
 import Avatar from "@common/Avatar";
 
-const Item = ({ username, time, subscribe }) => {
+const Item = ({ username, time, subscribe, profile_picture}) => {
     return (
         <div className={style.item}>
             <Avatar
                 storyRecomend
-                src={'https://picua.org/images/2019/08/19/8c53056911c201869b986346185f855c.jpg'}
+                src={profile_picture}
             />
             <div className={style.action}>
-                <span className={style.username}>dfdsfdsfs{username}</span>
+                <span className={style.username}>{username}</span>
                 <span className={style.subscribe}>{subscribe}</span>
                 <span className={style.time}>{time}</span>
             </div>

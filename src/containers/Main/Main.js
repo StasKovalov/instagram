@@ -11,7 +11,7 @@ const Main = ({currentUser}) => {
     <div className={style.inner}>
       <div className={style.container}>
         <List users={currentUser.users}/>
-        <Sidebar authUser={currentUser.authUser}/>
+        <Sidebar users={currentUser.users} authUser={currentUser.authUser}/>
       </div>
     </div>
   )

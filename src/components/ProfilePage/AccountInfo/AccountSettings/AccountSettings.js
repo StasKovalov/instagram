@@ -5,11 +5,19 @@ import Text from '@common/Text';
 import Icon from '@common/Icon';
 
 
-const AccountSettings = ({ username, authUser}) => {
+const AccountSettings = ({ username, authUser, isAdmin}) => {
     return (
         <div className = {style.settings}>
             <div className={style.text}>
-                <Text userName>{username}</Text>
+                <div className={style.username}>
+                    <Text userName>{username}</Text>
+                </div>
+                {
+                    isAdmin && 
+                    <div className={style.admin}>
+                        <Icon><span className={style.adminIcon} /></Icon>
+                    </div>
+                }
             </div>
             {
                 authUser === username && 

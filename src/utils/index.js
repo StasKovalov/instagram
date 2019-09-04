@@ -6,7 +6,7 @@ export const random = (min, max) => {
    return Math.floor(Math.random() * (max - min + 1)) + min; //Включаючи мінімум та максимум 
 }
 
-export const shuffle = (max, arr) => {
+export const shuffle = (arr) => {
    let randArray = [...arr];
    let j, temp;
    for (let i = randArray.length - 1; i > 0; i--) {
@@ -15,4 +15,6 @@ export const shuffle = (max, arr) => {
       randArray[j] = randArray[i];
       randArray[i] = temp;
    }
+
+   return randArray;
 }

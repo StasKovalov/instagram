@@ -43,8 +43,8 @@ class Header extends Component {
     this.setState({ value: e.target.value, isLoading: true });
     const { users } = this.props;
     const filtredUsers = users.filter(user => user.username.toLowerCase().includes(e.target.value.toLowerCase().trim()));
-    const updFiltredUsers = filtredUsers.map(({ profile_picture, username, full_name }) => ({
-      profile_picture, username, full_name
+    const updFiltredUsers = filtredUsers.map(({ profile_picture, username, full_name, isAdmin }) => ({
+      profile_picture, username, full_name, isAdmin
     }));
 
     setTimeout(() => {
@@ -98,7 +98,7 @@ class Header extends Component {
                         pathname: `/user/${user.username}`,
                         state: { username: user.username }
                       }}>
-                      <FoundUser {...user} />
+                      <FoundUser key={user.username} {...user} />
                     </Link>)}
                   {!filtredUsers.length && <div className={style.error}>Ничего не найдено</div>}
                 </div>

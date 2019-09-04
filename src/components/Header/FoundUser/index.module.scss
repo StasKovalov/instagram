@@ -31,3 +31,16 @@
     display: flex;
     flex-direction: column;
 }
+
+.usernameBlock {
+    display: flex;
+}
+
+.admin {
+    background: url('../../../assets/icons-image-size-s.png');
+    background-repeat: no-repeat;
+    background-position: -302px -337px;
+    height: 12px;
+    width: 12px;
+    margin-left: 4px;
+}

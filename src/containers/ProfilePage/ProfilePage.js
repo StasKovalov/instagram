@@ -49,7 +49,6 @@ class ProfilePage extends Component {
 
   render() {
     const { user } = this.state;
-    console.log(user, "Update");
     const { authUser } = this.props;
     return (
       <div className={style.inner}>

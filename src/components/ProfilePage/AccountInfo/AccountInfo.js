@@ -6,8 +6,7 @@ import AccountSettings from './AccountSettings';
 import AccountStat from '@share/AccountStat';
 
 const AccountInfo = ({user, authUser}) => {
-    const { counts, full_name, username, profile_picture, bio } = user;
-    
+    const { counts, full_name, username, profile_picture, bio, isAdmin } = user;
     return (
         <div className={style.accountInfo}>
             <div className={style.avatarWrap}>
@@ -15,7 +14,7 @@ const AccountInfo = ({user, authUser}) => {
             </div>
 
             <div className={style.info}>
-                <AccountSettings authUser={authUser} username={username}/>
+                <AccountSettings isAdmin={isAdmin} authUser={authUser} username={username}/>
                 <AccountStat counts={counts} desktop/>
                 <div className={style.accountAbout}>
                     <span className={style.realName}>{full_name}</span>
