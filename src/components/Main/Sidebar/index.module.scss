@@ -1,12 +1,11 @@
 @import '@scss/variables.scss';
 .sidebar {
     position: sticky;
-    display: flex;
     top : 75px;
     right: 0;
-    flex-direction: column;
     width: 280px;
     transition: all 0.2s ease-in-out;
+    max-height: 800px;
 
     @media screen and (max-width: 1024px) {
        display: none;
